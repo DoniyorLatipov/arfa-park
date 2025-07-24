@@ -472,22 +472,35 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 
-  const sizes = document.querySelectorAll(
-    '.layouts .content-banner .content-slider .swiper-slide .left .size',
-  );
+  const sizes = document.querySelectorAll('.layouts .content-banner .content-slider .size');
+  const sizeBoxes = document.querySelectorAll('.layouts .content-banner .content-slider .size-box');
+  const sizesConteiner = document.querySelector('.layouts .content-banner .content-slider');
 
-  sizes.forEach((size) => {
-    size.addEventListener('click', (e) => {
-      if (window.innerWidth < 600) {
-        // Закрываем другие
-        sizes.forEach((el) => {
-          if (el !== size) el.classList.remove('active');
-        });
+  sizesConteiner.addEventListener('click', (e) => {
+    const el = e.target;
+    console.log(el);
 
-        // Переключаем текущий
-        size.classList.toggle('active');
-      }
-    });
+    const isSize =
+      e.target.classList.contains('size') ||
+      e.target.classList.contains('size-box') ||
+      e.target.parentElement.classList.contains('size') ||
+      e.target.parentElement.classList.contains('size-box');
+
+    if (window.innerWidth < 600 && isSize) {
+      // Закрываем другие
+      sizes.forEach((size) => {
+        if (size === el) return;
+        size.classList.remove('active');
+      });
+
+      sizeBoxes.forEach((sizeBox) => {
+        if (sizeBox === el) return;
+        sizeBox.classList.remove('active');
+      });
+
+      // Переключаем текущий
+      el.classList.toggle('active');
+    }
   });
 
   function openSuccessModal({ name, phone }) {
