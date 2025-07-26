@@ -32,7 +32,6 @@
       sizes="1024x1024"
       href="img/favicons/apple-touch-icon-1024x1024.png"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <script>
       // let visits = parseInt(localStorage.getItem('site_visits') || '0', 10);
       // visits += 1;
@@ -48,14 +47,28 @@
       //   const top = document.querySelector('.top');
 
       //   if (img) {
-      //     img.srcset = isEven ? 'img/img5.jpg' : 'img/img38.jpg';
+      //     img.srcset = isEven ? 'img/img5-min.jpg' : 'img/img38-min.jpg';
       //     top.style.background = isEven
       //       ? 'linear-gradient(90deg, #0089D1, #008CD5 10%, #007FCE 40%)'
       //       : '#2a86cf';
       //   }
       // });
     </script>
-    <link rel="stylesheet" href="styles/main-autoprefix.css" />
+    <link
+      rel="preload"
+      href="styles/main-autoprefix.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="styles/main-autoprefix.css" /></noscript>
+
+    <link
+      rel="preload"
+      href="styles/swiper-bundle.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="styles/swiper-bundle.min.css" /></noscript>
   </head>
   <body>
     <header class="header">
@@ -307,9 +320,11 @@
     <main>
       <section class="top">
         <picture class="section-img">
-          <!-- <source srcset="img/img5.jpg" media="(max-width: 768px)"> -->
-          <source srcset="img/img38.jpg" media="(max-width: 1200px)" id="intro-image" />
-          <img src="img/img5.jpg" alt="#" />
+          <!-- <source srcset="img/img5-min.jpg" media="(max-width: 768px)"> -->
+          <source srcset="img/img38-min.webp" type="image/webp" media="(max-width: 1200px)" />
+          <source srcset="img/img38-min.jpg" media="(max-width: 1200px)" id="intro-image" />
+          <source srcset="img/img5-min.webp" type="image/webp" />
+          <img src="img/img5-min.jpg" alt="#" />
         </picture>
         <h1 class="h1">Готовые виллы премиум класса в&nbsp;закрытом коттеджном посёлке</h1>
         <h6 class=" ">
@@ -393,7 +408,8 @@
       <section class="flow flow1" id="flow1" data-flow-index="0">
         <h2 class="visually-hidden">flow1</h2>
         <picture class="img1 picture--hide picture--hide-right flow1-img">
-          <img src="img/img19.jpg" alt="#" />
+          <source srcset="img/img19-min.webp" type="image/webp" />
+          <img src="img/img19-min.jpg" alt="#" />
         </picture>
         <div class="txt-wrapper txt-wrapper--right">
           <h6 class=" ">23</h6>
@@ -421,7 +437,8 @@
           <span class="frame3"></span>
         </div>
         <picture class="img2 picture--hide picture--hide-left flow1-img">
-          <img src="img/img20.jpg" alt="#" />
+          <source srcset="img/img20-min.webp" type="image/webp" />
+          <img src="img/img20-min.jpg" alt="#" />
         </picture>
       </section>
       <section class="about">
@@ -566,7 +583,8 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img10.jpg" alt="#" />
+                  <source srcset="img/img10-min.webp" type="image/webp" />
+                  <img src="img/img10-min.jpg" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -635,7 +653,8 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img11.jpg" alt="#" />
+                  <source srcset="img/img11-min.webp" type="image/webp" />
+                  <img src="img/img11-min.jpg" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -704,7 +723,8 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img12.jpg" alt="#" />
+                  <source srcset="img/img12-min.webp" type="image/webp" />
+                  <img src="img/img12-min.jpg" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -773,7 +793,8 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img13.jpg" alt="#" />
+                  <source srcset="img/img13-min.webp" type="image/webp" />
+                  <img src="img/img13-min.jpg" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -842,7 +863,8 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img10.jpg" alt="#" />
+                  <source srcset="img/img10-min.webp" type="image/webp" />
+                  <img src="img/img10-min.jpg" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -911,7 +933,8 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img11.jpg" alt="#" />
+                  <source srcset="img/img11-min.webp" type="image/webp" />
+                  <img src="img/img11-min.jpg" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -980,7 +1003,8 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img12.jpg" alt="#" />
+                  <source srcset="img/img12-min.webp" type="image/webp" />
+                  <img src="img/img12-min.jpg" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -1049,7 +1073,8 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img13.jpg" alt="#" />
+                  <source srcset="img/img13-min.webp" type="image/webp" />
+                  <img src="img/img13-min.jpg" alt="#" />
                 </picture>
               </li>
             </ul>
@@ -1123,20 +1148,30 @@
             </a>
           </div>
           <div class="map" id="about-map">
-            <img class="map__imge" draggable="false" src="img/map-desktop.jpg" alt="map" />
+            <picture>
+              <source srcset="img/map-desktop-min.webp" type="image/webp" />
+              <img class="map__imge" draggable="false" src="img/map-desktop-min.jpg" alt="map" />
+            </picture>
           </div>
           <div class="map-ipad" id="about-map-ipad">
-            <img class="map__imge" draggable="false" src="img/map-tablet.jpg" alt="map" />
+            <picture>
+              <source srcset="img/map-tablet-min.webp" type="image/webp" />
+              <img class="map__imge" draggable="false" src="img/map-tablet-min.jpg" alt="map" />
+            </picture>
           </div>
 
           <div class="map-mobile" id="about-map-mobile">
-            <img class="map__imge" draggable="false" src="img/map-mobile.jpg" alt="map" />
+            <picture>
+              <source srcset="img/map-mobile-min.webp" type="image/webp" />
+              <img class="map__imge" draggable="false" src="img/map-mobile-min.jpg" alt="map" />
+            </picture>
           </div>
         </div>
       </section>
       <section class="flow flow2" data-flow-index="1">
         <picture class="img1 picture--hide picture--hide-right flow2-img">
-          <img src="img/img21.jpg" alt="#" />
+          <source srcset="img/img21-min.webp" type="image/webp" />
+          <img src="img/img21-min.jpg" alt="#" />
         </picture>
         <div class="txt-wrapper">
           <h2 class="h2">
@@ -1153,13 +1188,16 @@
           </button>
         </div>
         <picture class="img2 picture--hide picture--hide-left flow2-img">
-          <img src="img/img22.jpg" alt="#" />
+          <source srcset="img/img22-min.webp" type="image/webp" />
+          <img src="img/img22-min.jpg" alt="#" />
         </picture>
         <picture class="img3 picture--hide picture--hide-right flow2-img">
-          <img src="img/img23.jpg" alt="#" />
+          <source srcset="img/img23-min.webp" type="image/webp" />
+          <img src="img/img23-min.jpg" alt="#" />
         </picture>
         <picture class="img4 picture--hide picture--hide-left flow2-img">
-          <img src="img/img40.jpg" alt="#" />
+          <source srcset="img/img40-min.webp" type="image/webp" />
+          <img src="img/img40-min.jpg" alt="#" />
         </picture>
       </section>
       <section class="layouts">
@@ -1200,7 +1238,8 @@
               <div class="swiper-slide swiper-slide--1 to-left">
                 <div class="left">
                   <picture class="img-wrapper">
-                    <img src="img/img28.jpg" alt="#" />
+                    <source srcset="img/img28-min.webp" type="image/webp" />
+                    <img src="img/img28-min.jpg" alt="#" />
                     <span class="size size-1">
                       <span class="txt">Спальня</span>
                       <span class="num">
@@ -1240,7 +1279,8 @@
                 </div>
                 <div class="right">
                   <picture class="img-wrapper">
-                    <img src="img/img31.png" alt="#" />
+                    <source srcset="img/img31-min.webp" type="image/webp" />
+                    <img src="img/img31-min.png" alt="#" />
                     <span class="size-box size-box-1">
                       <span class="txt">Спальня</span>
                       <span class="num">
@@ -1282,7 +1322,8 @@
               <div class="swiper-slide swiper-slide--2 to-left">
                 <div class="left">
                   <picture class="img-wrapper">
-                    <img src="img/img29.jpg" alt="#" />
+                    <source srcset="img/img29-min.webp" type="image/webp" />
+                    <img src="img/img29-min.jpg" alt="#" />
                     <span class="size size-1">
                       <span class="txt">Спальня</span>
                       <span class="num">
@@ -1322,7 +1363,8 @@
                 </div>
                 <div class="right">
                   <picture class="img-wrapper">
-                    <img src="img/img32.png" alt="#" />
+                    <source srcset="img/img32-min.webp" type="image/webp" />
+                    <img src="img/img32-min.jpg" alt="#" />
                     <span class="size-box size-box-1">
                       <span class="txt">Спальня</span>
                       <span class="num">
@@ -1364,7 +1406,8 @@
               <div class="swiper-slide swiper-slide--3 to-left">
                 <div class="left">
                   <picture class="img-wrapper">
-                    <img src="img/img30.jpg" alt="#" />
+                    <source srcset="img/img30-min.webp" type="image/webp" />
+                    <img src="img/img30-min.jpg" alt="#" />
                     <span class="size size-1">
                       <span class="txt">Терраса</span>
                       <span class="num">
@@ -1383,7 +1426,8 @@
                 </div>
                 <div class="right">
                   <picture class="img-wrapper">
-                    <img src="img/img33.png" alt="#" />
+                    <source srcset="img/img33-min.webp" type="image/webp" />
+                    <img src="img/img33-min.jpg" alt="#" />
                     <span class="size-box size-box-1">
                       <span class="txt">Терраса</span>
                       <span class="num">
@@ -1420,16 +1464,28 @@
         <div class="photo-slider photo-slider--z1000">
           <ul class="swiper-wrapper">
             <li class="swiper-slide">
-              <img src="img/img34.jpg" alt="#" />
+              <picture>
+                <source srcset="img/img34-min.webp" type="image/webp" />
+                <img src="img/img34-min.jpg" alt="#" />
+              </picture>
             </li>
             <li class="swiper-slide">
-              <img src="img/img35.jpg" alt="#" />
+              <picture>
+                <source srcset="img/img35-min.webp" type="image/webp" />
+                <img src="img/img35-min.jpg" alt="#" />
+              </picture>
             </li>
             <li class="swiper-slide">
-              <img src="img/img24.jpg" alt="#" />
+              <picture>
+                <source srcset="img/img24-min.webp" type="image/webp" />
+                <img src="img/img24-min.jpg" alt="#" />
+              </picture>
             </li>
             <li class="swiper-slide">
-              <img src="img/img25.jpg" alt="#" />
+              <picture>
+                <source srcset="img/img25-min.webp" type="image/webp" />
+                <img src="img/img25-min.jpg" alt="#" />
+              </picture>
             </li>
           </ul>
         </div>
@@ -1438,16 +1494,28 @@
             <div class="active-marker"></div>
             <ul class="swiper-wrapper">
               <li class="swiper-slide">
-                <img src="img/img34.jpg" alt="#" />
+                <picture>
+                  <source srcset="img/img34-min.webp" type="image/webp" />
+                  <img src="img/img34-min.jpg" alt="#" />
+                </picture>
               </li>
               <li class="swiper-slide">
-                <img src="img/img35.jpg" alt="#" />
+                <picture>
+                  <source srcset="img/img35-min.webp" type="image/webp" />
+                  <img src="img/img35-min.jpg" alt="#" />
+                </picture>
               </li>
               <li class="swiper-slide">
-                <img src="img/img24.jpg" alt="#" />
+                <picture>
+                  <source srcset="img/img24-min.webp" type="image/webp" />
+                  <img src="img/img24-min.jpg" alt="#" />
+                </picture>
               </li>
               <li class="swiper-slide">
-                <img src="img/img25.jpg" alt="#" />
+                <picture>
+                  <source srcset="img/img25-min.webp" type="image/webp" />
+                  <img src="img/img25-min.jpg" alt="#" />
+                </picture>
               </li>
             </ul>
           </div>
@@ -1537,7 +1605,8 @@
       </div>
       <section class="builder">
         <picture class="section-img">
-          <img src="img/img4.jpg" alt="#" />
+          <source srcset="img/img4-min.webp" type="image/webp" />
+          <img src="img/img4-min.jpg" alt="#" />
         </picture>
         <div class="txt-wrapper">
           <h2 class="h3">
@@ -1549,7 +1618,8 @@
           </a>
           <div class="builder-wrapper">
             <picture class="icon">
-              <img src="img/icon.png" alt="#" />
+              <source srcset="img/icon-min.webp" type="image/webp" />
+              <img src="img/icon-min.png" alt="#" />
             </picture>
             <p>
               ESTA Costruction - генеральный подрядчик комплекса арфа парк отеля. входит
@@ -1574,22 +1644,28 @@
           </a>
         </div>
         <picture class="img1 picture--hide picture--hide-left flow3-img">
-          <img src="img/img24.jpg" alt="#" />
+          <source srcset="img/img24-min.webp" type="image/webp" />
+          <img src="img/img24-min.jpg" alt="#" />
 
           <p>Просторная гостиная на&nbsp;2-м этаже</p>
         </picture>
         <picture class="img2 picture--hide picture--hide-right flow3-img">
-          <img src="img/img25.jpg" alt="#" />
+          <source srcset="img/img25-min.webp" type="image/webp" />
+
+          <img src="img/img25-min.jpg" alt="#" />
 
           <p>Просторная гостиная на&nbsp;2-м этаже</p>
         </picture>
         <picture class="img3 picture--hide picture--hide-left flow3-img">
-          <img src="img/img26.jpg" alt="#" />
+          <source srcset="img/img26-min.webp" type="image/webp" />
+          <img src="img/img26-min.jpg" alt="#" />
 
           <p>Просторная гостиная на&nbsp;2-м этаже</p>
         </picture>
         <picture class="img4 picture--hide picture--hide-right flow3-img">
-          <img src="img/img41.jpg" alt="#" />
+          <source srcset="img/img41-min.webp" type="image/webp" />
+
+          <img src="img/img41-min.jpg" alt="#" />
 
           <p>Просторная гостиная на&nbsp;2-м этаже</p>
         </picture>
@@ -1606,7 +1682,8 @@
           <ul class="main-list">
             <li>
               <picture class="img-wrapper">
-                <img src="img/img6.jpg" alt="#" />
+                <source srcset="img/img6-min.webp" type="image/webp" />
+                <img src="img/img6-min.jpg" alt="#" />
               </picture>
               <h6 class=" ">Вечнозелёный парк и&nbsp;песчаный пляж</h6>
               <p class=" ">
@@ -1616,7 +1693,9 @@
             </li>
             <li>
               <picture class="img-wrapper">
-                <img src="img/img7.jpg" alt="#" />
+                <source srcset="img/img7-min.webp" type="image/webp" />
+
+                <img src="img/img7-min.jpg" alt="#" />
               </picture>
               <h6 class=" ">Рестораны и&nbsp;бары</h6>
               <p class=" ">
@@ -1627,7 +1706,8 @@
             </li>
             <li>
               <picture class="img-wrapper">
-                <img src="img/img8.jpg" alt="#" />
+                <source srcset="img/img8-min.webp" type="image/webp" />
+                <img src="img/img8-min.jpg" alt="#" />
               </picture>
               <h6 class=" ">SPA</h6>
               <p class=" ">
@@ -1638,7 +1718,8 @@
             </li>
             <li>
               <picture class="img-wrapper">
-                <img src="img/img9.jpg" alt="#" />
+                <source srcset="img/img9-min.webp" type="image/webp" />
+                <img src="img/img9-min.jpg" alt="#" />
               </picture>
               <h6 class=" ">Детям</h6>
               <p class=" ">
@@ -1673,16 +1754,22 @@
         </div>
         <div class="villas-map">
           <picture class="placemark-pic active">
-            <source srcset="img/111a-mob.png" media="(max-width: 600px)" />
-            <img src="img/111a.png" alt="#" />
+            <source srcset="img/111a-mob-min.webp" type="image/webp" media="(max-width: 600px)" />
+            <source srcset="img/111a-mob-min.png" media="(max-width: 600px)" />
+            <source srcset="img/111a-min.webp" type="image/webp" />
+            <img src="img/111a-min.png" alt="#" />
           </picture>
           <picture class="placemark-pic hidden">
-            <source srcset="img/111b-mob.png" media="(max-width: 600px)" />
-            <img src="img/111b.png" alt="#" />
+            <source srcset="img/111b-mob-min.webp" type="image/webp" media="(max-width: 600px)" />
+            <source srcset="img/111b-mob-min.png" media="(max-width: 600px)" />
+            <source srcset="img/111b-min.webp" type="image/webp" />
+            <img src="img/111b-min.png" alt="#" />
           </picture>
           <picture class="placemark-pic hidden">
-            <source srcset="img/111c-mob.png" media="(max-width: 600px)" />
-            <img src="img/111c.png" alt="#" />
+            <source srcset="img/111c-mob-min.webp" type="image/webp" media="(max-width: 600px)" />
+            <source srcset="img/111c-mob-min.png" media="(max-width: 600px)" />
+            <source srcset="img/111c-min.webp" type="image/webp" />
+            <img src="img/111c-min.png" alt="#" />
           </picture>
           <div class="map-btns">
             <a href="https://yandex.ru/maps/-/CHH6jEiv">
@@ -1900,7 +1987,8 @@
       </section>
       <section class="test">
         <picture class="section-img">
-          <img src="img/img3.jpg" alt="#" />
+          <source srcset="img/img3-min.webp" type="image/webp" />
+          <img src="img/img3-min.jpg" alt="#" />
         </picture>
         <div class="container">
           <div class="txt-wrapper">
@@ -1926,7 +2014,8 @@
           <ul class="news-list">
             <li>
               <picture class="img-wrapper">
-                <img src="img/img.jpg" alt="#" />
+                <source srcset="img/img-min.webp" type="image/webp" />
+                <img src="img/img-min.jpg" alt="#" />
               </picture>
               <div class="txt-wrapper">
                 <p class=" ">01.05.2025</p>
@@ -1940,7 +2029,8 @@
             </li>
             <li>
               <picture class="img-wrapper">
-                <img src="img/img1.jpg" alt="#" />
+                <source srcset="img/img1-min.webp" type="image/webp" />
+                <img src="img/img1-min.jpg" alt="#" />
               </picture>
               <div class="txt-wrapper">
                 <p class=" ">01.05.2025</p>
@@ -1954,7 +2044,8 @@
             </li>
             <li>
               <picture class="img-wrapper">
-                <img src="img/img2.jpg" alt="#" />
+                <source srcset="img/img2-min.webp" type="image/webp" />
+                <img src="img/img2-min.jpg" alt="#" />
               </picture>
               <div class="txt-wrapper">
                 <p class=" ">01.05.2025</p>
@@ -2588,8 +2679,10 @@
       </section>
       <div class="flow flow4" data-flow-index="3">
         <picture class="contacts-img picture--hide picture--hide-footer flow4-img">
-          <source srcset="img/img39.jpg" media="(max-width: 600px)" />
-          <img src="img/img15.jpg" alt="#" />
+          <source srcset="img/img39-min.webp" type="image/webp" media="(max-width: 600px)" />
+          <source srcset="img/img39-min.jpg" media="(max-width: 600px)" />
+          <source srcset="img/img15-min.webp" type="image/webp" />
+          <img src="img/img15-min.jpg" alt="#" />
         </picture>
       </div>
     </main>
@@ -2641,7 +2734,8 @@
           </svg>
         </button>
         <picture class="img-wrapper">
-          <img src="img/img.jpg" alt="#" />
+          <source srcset="img/img-min.webp" type="image/webp" />
+          <img src="img/img-min.jpg" alt="#" />
         </picture>
         <div class="txt-wrapper">
           <div class="title-wrapper">
@@ -2662,16 +2756,28 @@
             <div class="modal-news-slider">
               <ul class="swiper-wrapper">
                 <li class="swiper-slide">
-                  <img src="img/img1.jpg" alt="#" />
+                  <picture>
+                    <source srcset="img/img1-min.webp" type="image/webp" />
+                    <img src="img/img1-min.jpg" alt="#" />
+                  </picture>
                 </li>
                 <li class="swiper-slide">
-                  <img src="img/img2.jpg" alt="#" />
+                  <picture>
+                    <source srcset="img/img2-min.webp" type="image/webp" />
+                    <img src="img/img2-min.jpg" alt="#" />
+                  </picture>
                 </li>
                 <li class="swiper-slide">
-                  <img src="img/img3.jpg" alt="#" />
+                  <picture>
+                    <source srcset="img/img3-min.webp" type="image/webp" />
+                    <img src="img/img3-min.jpg" alt="#" />
+                  </picture>
                 </li>
                 <li class="swiper-slide">
-                  <img src="img/img4.jpg" alt="#" />
+                  <picture>
+                    <source srcset="img/img4-min.webp" type="image/webp" />
+                    <img src="img/img4-min.jpg" alt="#" />
+                  </picture>
                 </li>
               </ul>
             </div>
@@ -2917,7 +3023,8 @@
           </div>
           <div class="bottom-wrapper">
             <picture>
-              <img src="img/img36.png" alt="#" />
+              <source srcset="img/img36-min.webp" type="image/webp" />
+              <img src="img/img36-min.png" alt="#" />
             </picture>
             <p class="whois">Менеджер Арфа Парка по&nbsp;работе с&nbsp;клиентами</p>
             <p class="name">Попова Екатерина</p>
@@ -2952,7 +3059,7 @@
       type="text/javascript"
     ></script>
 
-    <script src="js/main.js"></script>
+    <script src="js/main.min.js"></script>
     <script></script>
   </body>
 </html>
