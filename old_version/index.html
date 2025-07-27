@@ -1,206 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="format-detection" content="telephone=no" />
-    <meta name="format-detection" content="email=no" />
-    <title>Арфа Парк</title>
-    <meta name="theme-color" content="#fff" />
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-    <meta
-      name="viewport"
-      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
-    />
-    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon" />
-    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png" />
-    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png" />
-    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png" />
-    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
-    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" />
-    <link
-      rel="apple-touch-icon"
-      sizes="1024x1024"
-      href="img/favicons/apple-touch-icon-1024x1024.png"
-    />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script>
-      // let visits = parseInt(localStorage.getItem('site_visits') || '0', 10);
-      // visits += 1;
-      // localStorage.setItem('site_visits', visits);
-
-      // const isEven = visits % 2 === 0;
-      // localStorage.setItem('isEvenVisit', isEven.toString());
-    </script>
-    <script>
-      // document.addEventListener('DOMContentLoaded', () => {
-      //   const isEven = localStorage.getItem('isEvenVisit') === 'true';
-      //   const img = document.getElementById('intro-image');
-      //   const top = document.querySelector('.top');
-
-      //   if (img) {
-      //     img.srcset = isEven ? 'img/img5.jpg' : 'img/img38.jpg';
-      //     top.style.background = isEven
-      //       ? 'linear-gradient(90deg, #0089D1, #008CD5 10%, #007FCE 40%)'
-      //       : '#2a86cf';
-      //   }
-      // });
-    </script>
-    <style>
-      .btn span {
-        -webkit-font-feature-settings: 'case' on;
-        font-feature-settings: 'case' on;
-        font-size: 14px;
-        font-weight: 500;
-        letter-spacing: 1.26px;
-        text-transform: uppercase;
-        white-space: nowrap;
-        -webkit-transition: 0.3s;
-        -o-transition: 0.3s;
-        transition: 0.3s;
-      }
-
-      .header {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 100;
-        padding: 54px 56px 32px;
-        width: 100%;
-      }
-
-      .header .logo {
-        width: 120px;
-        height: 40px;
-        display: block;
-      }
-
-      .header .logo svg {
-        width: 100%;
-        height: 100%;
-      }
-
-      .top {
-        position: relative;
-        z-index: 10;
-        min-height: 100dvh;
-        padding: 116px 56px 54px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
-        justify-content: center;
-      }
-
-      .top .section-img {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: -10;
-        width: 100%;
-        height: 100%;
-        display: block;
-        overflow: hidden;
-      }
-
-      .top .section-img img,
-      .top .section-img source {
-        width: 100%;
-        height: 100%;
-        -o-object-fit: cover;
-        object-fit: cover;
-      }
-
-      .top .section-img::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: -webkit-gradient(
-          linear,
-          right top,
-          left top,
-          color-stop(20%, rgba(52, 191, 255, 0)),
-          color-stop(60%, rgba(15, 127, 166, 0.25)),
-          to(rgba(2, 105, 136, 0.4))
-        );
-        background: -o-linear-gradient(
-          right,
-          rgba(52, 191, 255, 0) 20%,
-          rgba(15, 127, 166, 0.25) 60%,
-          rgba(2, 105, 136, 0.4) 100%
-        );
-        background: linear-gradient(
-          270deg,
-          rgba(52, 191, 255, 0) 20%,
-          rgba(15, 127, 166, 0.25) 60%,
-          rgba(2, 105, 136, 0.4) 100%
-        );
-      }
-
-      .top .h1 {
-        max-width: 810px;
-        margin-top: auto;
-        color: #ffffff;
-      }
-
-      .top h6 {
-        margin-top: 21px;
-        max-width: 810px;
-        color: #fff;
-        font-size: 24px;
-        font-weight: 400;
-        line-height: 143%;
-        letter-spacing: -0.24px;
-      }
-
-      .top .btns-wrapper {
-        margin-top: 56px;
-        padding-bottom: 24px;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        gap: 16px;
-      }
-
-      .top .down-link {
-        display: block;
-        margin-top: auto;
-        color: #fff;
-        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.17);
-        font-size: 17px;
-        font-weight: 400;
-        line-height: 134%;
-        text-decoration: none;
-        scroll-behavior: smooth !important;
-      }
-    </style>
-    <link
-      rel="preload"
-      href="styles/main-autoprefix.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
-    />
-    <noscript><link rel="stylesheet" href="styles/main-autoprefix.min.css" /></noscript>
-  </head>
+ 
   <body>
     <header class="header">
       <a class="logo" href="index.html">
@@ -451,9 +251,9 @@
     <main>
       <section class="top">
         <picture class="section-img">
-          <!-- <source srcset="img/img5-min.jpg" media="(max-width: 768px)"> -->
-          <source srcset="img/img38-min.jpg" media="(max-width: 1200px)" id="intro-image" />
-          <img src="img/img5-min.jpg" alt="#" />
+          <!-- <source srcset="img/img5-min.webp" media="(max-width: 768px)"> -->
+          <source srcset="img/img38-min.webp" media="(max-width: 1200px)" id="intro-image" />
+          <img src="img/img5-min.webp" alt="#" />
         </picture>
         <h1 class="h1">Готовые виллы премиум класса в&nbsp;закрытом коттеджном посёлке</h1>
         <h6 class=" ">
@@ -537,7 +337,7 @@
       <section class="flow flow1" id="flow1" data-flow-index="0">
         <h2 class="visually-hidden">flow1</h2>
         <picture class="img1 picture--hide picture--hide-right flow1-img">
-          <img src="img/img19-min.jpg" alt="#" />
+          <img src="img/img19-min.webp" alt="#" />
         </picture>
         <div class="txt-wrapper txt-wrapper--right">
           <h6 class=" ">23</h6>
@@ -565,7 +365,7 @@
           <span class="frame3"></span>
         </div>
         <picture class="img2 picture--hide picture--hide-left flow1-img">
-          <img src="img/img20-min.jpg" alt="#" />
+          <img src="img/img20-min.webp" alt="#" />
         </picture>
       </section>
       <section class="about">
@@ -710,7 +510,7 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img10-min.jpg" alt="#" />
+                  <img src="img/img10-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -779,7 +579,7 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img11-min.jpg" alt="#" />
+                  <img src="img/img11-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -848,7 +648,7 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img12-min.jpg" alt="#" />
+                  <img src="img/img12-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -917,7 +717,7 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img13-min.jpg" alt="#" />
+                  <img src="img/img13-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -986,7 +786,7 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img10-min.jpg" alt="#" />
+                  <img src="img/img10-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -1055,7 +855,7 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img11-min.jpg" alt="#" />
+                  <img src="img/img11-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -1124,7 +924,7 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img12-min.jpg" alt="#" />
+                  <img src="img/img12-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -1193,7 +993,7 @@
                   </p>
                 </div>
                 <picture>
-                  <img src="img/img13-min.jpg" alt="#" />
+                  <img src="img/img13-min.webp" alt="#" />
                 </picture>
               </li>
             </ul>
@@ -1267,20 +1067,20 @@
             </a>
           </div>
           <div class="map" id="about-map">
-            <img class="map__imge" draggable="false" src="img/map-desktop-min.jpg" alt="map" />
+            <img class="map__imge" draggable="false" src="img/map-desktop-min.webp" alt="map" />
           </div>
           <div class="map-ipad" id="about-map-ipad">
-            <img class="map__imge" draggable="false" src="img/map-tablet-min.jpg" alt="map" />
+            <img class="map__imge" draggable="false" src="img/map-tablet-min.webp" alt="map" />
           </div>
 
           <div class="map-mobile" id="about-map-mobile">
-            <img class="map__imge" draggable="false" src="img/map-mobile-min.jpg" alt="map" />
+            <img class="map__imge" draggable="false" src="img/map-mobile-min.webp" alt="map" />
           </div>
         </div>
       </section>
       <section class="flow flow2" data-flow-index="1">
         <picture class="img1 picture--hide picture--hide-right flow2-img">
-          <img src="img/img21-min.jpg" alt="#" />
+          <img src="img/img21-min.webp" alt="#" />
         </picture>
         <div class="txt-wrapper">
           <h2 class="h2">
@@ -1297,13 +1097,13 @@
           </button>
         </div>
         <picture class="img2 picture--hide picture--hide-left flow2-img">
-          <img src="img/img22-min.jpg" alt="#" />
+          <img src="img/img22-min.webp" alt="#" />
         </picture>
         <picture class="img3 picture--hide picture--hide-right flow2-img">
-          <img src="img/img23-min.jpg" alt="#" />
+          <img src="img/img23-min.webp" alt="#" />
         </picture>
         <picture class="img4 picture--hide picture--hide-left flow2-img">
-          <img src="img/img40-min.jpg" alt="#" />
+          <img src="img/img40-min.webp" alt="#" />
         </picture>
       </section>
       <section class="layouts">
@@ -1344,7 +1144,7 @@
               <div class="swiper-slide swiper-slide--1 to-left">
                 <div class="left">
                   <picture class="img-wrapper">
-                    <img src="img/img28-min.jpg" alt="#" />
+                    <img src="img/img28-min.webp" alt="#" />
                     <span class="size size-1">
                       <span class="txt">Спальня</span>
                       <span class="num">
@@ -1384,7 +1184,7 @@
                 </div>
                 <div class="right">
                   <picture class="img-wrapper">
-                    <img src="img/img31-min.png" alt="#" />
+                    <img src="img/img31-min.webp" alt="#" />
                     <span class="size-box size-box-1">
                       <span class="txt">Спальня</span>
                       <span class="num">
@@ -1426,7 +1226,7 @@
               <div class="swiper-slide swiper-slide--2 to-left">
                 <div class="left">
                   <picture class="img-wrapper">
-                    <img src="img/img29-min.jpg" alt="#" />
+                    <img src="img/img29-min.webp" alt="#" />
                     <span class="size size-1">
                       <span class="txt">Спальня</span>
                       <span class="num">
@@ -1466,7 +1266,7 @@
                 </div>
                 <div class="right">
                   <picture class="img-wrapper">
-                    <img src="img/img32-min.png" alt="#" />
+                    <img src="img/img32-min.webp" alt="#" />
                     <span class="size-box size-box-1">
                       <span class="txt">Спальня</span>
                       <span class="num">
@@ -1508,7 +1308,7 @@
               <div class="swiper-slide swiper-slide--3 to-left">
                 <div class="left">
                   <picture class="img-wrapper">
-                    <img src="img/img30-min.jpg" alt="#" />
+                    <img src="img/img30-min.webp" alt="#" />
                     <span class="size size-1">
                       <span class="txt">Терраса</span>
                       <span class="num">
@@ -1527,7 +1327,7 @@
                 </div>
                 <div class="right">
                   <picture class="img-wrapper">
-                    <img src="img/img33-min.png" alt="#" />
+                    <img src="img/img33-min.webp" alt="#" />
                     <span class="size-box size-box-1">
                       <span class="txt">Терраса</span>
                       <span class="num">
@@ -1564,16 +1364,16 @@
         <div class="photo-slider photo-slider--z1000">
           <ul class="swiper-wrapper">
             <li class="swiper-slide">
-              <img src="img/img34-min.jpg" alt="#" />
+              <img src="img/img34-min.webp" alt="#" />
             </li>
             <li class="swiper-slide">
-              <img src="img/img35-min.jpg" alt="#" />
+              <img src="img/img35-min.webp" alt="#" />
             </li>
             <li class="swiper-slide">
-              <img src="img/img24-min.jpg" alt="#" />
+              <img src="img/img24-min.webp" alt="#" />
             </li>
             <li class="swiper-slide">
-              <img src="img/img25-min.jpg" alt="#" />
+              <img src="img/img25-min.webp" alt="#" />
             </li>
           </ul>
         </div>
@@ -1582,16 +1382,16 @@
             <div class="active-marker"></div>
             <ul class="swiper-wrapper">
               <li class="swiper-slide">
-                <img src="img/img34-min.jpg" alt="#" />
+                <img src="img/img34-min.webp" alt="#" />
               </li>
               <li class="swiper-slide">
-                <img src="img/img35-min.jpg" alt="#" />
+                <img src="img/img35-min.webp" alt="#" />
               </li>
               <li class="swiper-slide">
-                <img src="img/img24-min.jpg" alt="#" />
+                <img src="img/img24-min.webp" alt="#" />
               </li>
               <li class="swiper-slide">
-                <img src="img/img25-min.jpg" alt="#" />
+                <img src="img/img25-min.webp" alt="#" />
               </li>
             </ul>
           </div>
@@ -1681,7 +1481,7 @@
       </div>
       <section class="builder">
         <picture class="section-img">
-          <img src="img/img4-min.jpg" alt="#" />
+          <img src="img/img4-min.webp" alt="#" />
         </picture>
         <div class="txt-wrapper">
           <h2 class="h3">
@@ -1693,7 +1493,7 @@
           </a>
           <div class="builder-wrapper">
             <picture class="icon">
-              <img src="img/icon-min.png" alt="#" />
+              <img src="img/icon-min.webp" alt="#" />
             </picture>
             <p>
               ESTA Costruction - генеральный подрядчик комплекса арфа парк отеля. входит
@@ -1718,22 +1518,22 @@
           </a>
         </div>
         <picture class="img1 picture--hide picture--hide-left flow3-img">
-          <img src="img/img24-min.jpg" alt="#" />
+          <img src="img/img24-min.webp" alt="#" />
 
           <p>Просторная гостиная на&nbsp;2-м этаже</p>
         </picture>
         <picture class="img2 picture--hide picture--hide-right flow3-img">
-          <img src="img/img25-min.jpg" alt="#" />
+          <img src="img/img25-min.webp" alt="#" />
 
           <p>Просторная гостиная на&nbsp;2-м этаже</p>
         </picture>
         <picture class="img3 picture--hide picture--hide-left flow3-img">
-          <img src="img/img26-min.jpg" alt="#" />
+          <img src="img/img26-min.webp" alt="#" />
 
           <p>Просторная гостиная на&nbsp;2-м этаже</p>
         </picture>
         <picture class="img4 picture--hide picture--hide-right flow3-img">
-          <img src="img/img41-min.jpg" alt="#" />
+          <img src="img/img41-min.webp" alt="#" />
 
           <p>Просторная гостиная на&nbsp;2-м этаже</p>
         </picture>
@@ -1750,7 +1550,7 @@
           <ul class="main-list">
             <li>
               <picture class="img-wrapper">
-                <img src="img/img6-min.jpg" alt="#" />
+                <img src="img/img6-min.webp" alt="#" />
               </picture>
               <h6 class=" ">Вечнозелёный парк и&nbsp;песчаный пляж</h6>
               <p class=" ">
@@ -1760,7 +1560,7 @@
             </li>
             <li>
               <picture class="img-wrapper">
-                <img src="img/img7-min.jpg" alt="#" />
+                <img src="img/img7-min.webp" alt="#" />
               </picture>
               <h6 class=" ">Рестораны и&nbsp;бары</h6>
               <p class=" ">
@@ -1771,7 +1571,7 @@
             </li>
             <li>
               <picture class="img-wrapper">
-                <img src="img/img8-min.jpg" alt="#" />
+                <img src="img/img8-min.webp" alt="#" />
               </picture>
               <h6 class=" ">SPA</h6>
               <p class=" ">
@@ -1782,7 +1582,7 @@
             </li>
             <li>
               <picture class="img-wrapper">
-                <img src="img/img9-min.jpg" alt="#" />
+                <img src="img/img9-min.webp" alt="#" />
               </picture>
               <h6 class=" ">Детям</h6>
               <p class=" ">
@@ -1817,16 +1617,16 @@
         </div>
         <div class="villas-map">
           <picture class="placemark-pic active">
-            <source srcset="img/111a-mob-min.png" media="(max-width: 600px)" />
-            <img src="img/111a-min.png" alt="#" />
+            <source srcset="img/111a-mob-min.webp" media="(max-width: 600px)" />
+            <img src="img/111a-min.webp" alt="#" />
           </picture>
           <picture class="placemark-pic hidden">
-            <source srcset="img/111b-mob-min.png" media="(max-width: 600px)" />
-            <img src="img/111b-min.png" alt="#" />
+            <source srcset="img/111b-mob-min.webp" media="(max-width: 600px)" />
+            <img src="img/111b-min.webp" alt="#" />
           </picture>
           <picture class="placemark-pic hidden">
-            <source srcset="img/111c-mob-min.png" media="(max-width: 600px)" />
-            <img src="img/111c-min.png" alt="#" />
+            <source srcset="img/111c-mob-min.webp" media="(max-width: 600px)" />
+            <img src="img/111c-min.webp" alt="#" />
           </picture>
           <div class="map-btns">
             <a href="https://yandex.ru/maps/-/CHH6jEiv">
@@ -2044,7 +1844,7 @@
       </section>
       <section class="test">
         <picture class="section-img">
-          <img src="img/img3-min.jpg" alt="#" />
+          <img src="img/img3-min.webp" alt="#" />
         </picture>
         <div class="container">
           <div class="txt-wrapper">
@@ -2070,7 +1870,7 @@
           <ul class="news-list">
             <li>
               <picture class="img-wrapper">
-                <img src="img/img-min.jpg" alt="#" />
+                <img src="img/img-min.webp" alt="#" />
               </picture>
               <div class="txt-wrapper">
                 <p class=" ">01.05.2025</p>
@@ -2084,7 +1884,7 @@
             </li>
             <li>
               <picture class="img-wrapper">
-                <img src="img/img1-min.jpg" alt="#" />
+                <img src="img/img1-min.webp" alt="#" />
               </picture>
               <div class="txt-wrapper">
                 <p class=" ">01.05.2025</p>
@@ -2098,7 +1898,7 @@
             </li>
             <li>
               <picture class="img-wrapper">
-                <img src="img/img2-min.jpg" alt="#" />
+                <img src="img/img2-min.webp" alt="#" />
               </picture>
               <div class="txt-wrapper">
                 <p class=" ">01.05.2025</p>
@@ -2732,8 +2532,8 @@
       </section>
       <div class="flow flow4" data-flow-index="3">
         <picture class="contacts-img picture--hide picture--hide-footer flow4-img">
-          <source srcset="img/img39-min.jpg" media="(max-width: 600px)" />
-          <img src="img/img15-min.jpg" alt="#" />
+          <source srcset="img/img39-min.webp" media="(max-width: 600px)" />
+          <img src="img/img15-min.webp" alt="#" />
         </picture>
       </div>
     </main>
@@ -2785,7 +2585,7 @@
           </svg>
         </button>
         <picture class="img-wrapper">
-          <img src="img/img-min.jpg" alt="#" />
+          <img src="img/img-min.webp" alt="#" />
         </picture>
         <div class="txt-wrapper">
           <div class="title-wrapper">
@@ -2806,16 +2606,16 @@
             <div class="modal-news-slider">
               <ul class="swiper-wrapper">
                 <li class="swiper-slide">
-                  <img src="img/img1-min.jpg" alt="#" />
+                  <img src="img/img1-min.webp" alt="#" />
                 </li>
                 <li class="swiper-slide">
-                  <img src="img/img2-min.jpg" alt="#" />
+                  <img src="img/img2-min.webp" alt="#" />
                 </li>
                 <li class="swiper-slide">
-                  <img src="img/img3-min.jpg" alt="#" />
+                  <img src="img/img3-min.webp" alt="#" />
                 </li>
                 <li class="swiper-slide">
-                  <img src="img/img4-min.jpg" alt="#" />
+                  <img src="img/img4-min.webp" alt="#" />
                 </li>
               </ul>
             </div>
@@ -3061,7 +2861,7 @@
           </div>
           <div class="bottom-wrapper">
             <picture>
-              <img src="img/img36-min.png" alt="#" />
+              <img src="img/img36-min.webp" alt="#" />
             </picture>
             <p class="whois">Менеджер Арфа Парка по&nbsp;работе с&nbsp;клиентами</p>
             <p class="name">Попова Екатерина</p>
