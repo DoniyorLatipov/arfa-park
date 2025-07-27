@@ -55,6 +55,144 @@
       //   }
       // });
     </script>
+    <style>
+      .btn span {
+        -webkit-font-feature-settings: 'case' on;
+        font-feature-settings: 'case' on;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1.26px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        padding: 54px 56px 32px;
+        width: 100%;
+      }
+
+      .header .logo {
+        width: 120px;
+        height: 40px;
+        display: block;
+      }
+
+      .header .logo svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .top {
+        position: relative;
+        z-index: 10;
+        min-height: 100dvh;
+        padding: 116px 56px 54px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .top .section-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -10;
+        width: 100%;
+        height: 100%;
+        display: block;
+        overflow: hidden;
+      }
+
+      .top .section-img img,
+      .top .section-img source {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+
+      .top .section-img::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: -webkit-gradient(
+          linear,
+          right top,
+          left top,
+          color-stop(20%, rgba(52, 191, 255, 0)),
+          color-stop(60%, rgba(15, 127, 166, 0.25)),
+          to(rgba(2, 105, 136, 0.4))
+        );
+        background: -o-linear-gradient(
+          right,
+          rgba(52, 191, 255, 0) 20%,
+          rgba(15, 127, 166, 0.25) 60%,
+          rgba(2, 105, 136, 0.4) 100%
+        );
+        background: linear-gradient(
+          270deg,
+          rgba(52, 191, 255, 0) 20%,
+          rgba(15, 127, 166, 0.25) 60%,
+          rgba(2, 105, 136, 0.4) 100%
+        );
+      }
+
+      .top .h1 {
+        max-width: 810px;
+        margin-top: auto;
+        color: #ffffff;
+      }
+
+      .top h6 {
+        margin-top: 21px;
+        max-width: 810px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 143%;
+        letter-spacing: -0.24px;
+      }
+
+      .top .btns-wrapper {
+        margin-top: 56px;
+        padding-bottom: 24px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .top .down-link {
+        display: block;
+        margin-top: auto;
+        color: #fff;
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.17);
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 134%;
+        text-decoration: none;
+        scroll-behavior: smooth !important;
+      }
+    </style>
     <link
       rel="preload"
       href="styles/main-autoprefix.min.css"
@@ -2949,8 +3087,6 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/inputmask.min.js"></script>
     <script src="https://unpkg.com/@studio-freight/lenis@1.0.40/dist/lenis.umd.js"></script>
     <script
