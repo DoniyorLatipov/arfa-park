@@ -55,7 +55,13 @@
       //   }
       // });
     </script>
-    <link rel="stylesheet" href="styles/main-autoprefix.min.css" />
+    <link
+      rel="preload"
+      href="styles/main-autoprefix.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="styles/main-autoprefix.css" /></noscript>
   </head>
   <body>
     <header class="header">
