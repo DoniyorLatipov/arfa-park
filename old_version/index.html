@@ -194,6 +194,89 @@
         text-decoration: none;
         scroll-behavior: smooth !important;
       }
+
+      @media (max-width: 1200px) {
+        .header {
+          padding: 36px 36px 20px;
+        }
+
+        .header .logo {
+          width: 105px;
+          height: 35px;
+        }
+
+        .top {
+          padding: 91px 36px 36px;
+          -webkit-box-pack: start;
+          -ms-flex-pack: start;
+          justify-content: flex-start;
+          background-color: #2a86cf;
+        }
+
+        .top .section-img {
+          top: 380px;
+          width: 100%;
+          height: calc(100% - 380px);
+        }
+
+        .top .section-img::before {
+          background: -webkit-gradient(
+            linear,
+            left top,
+            left bottom,
+            from(#2a86cf),
+            color-stop(32.52%, rgba(42, 134, 207, 0))
+          );
+          background: -o-linear-gradient(top, #2a86cf 0%, rgba(42, 134, 207, 0) 32.52%);
+          background: linear-gradient(180deg, #2a86cf 0%, rgba(42, 134, 207, 0) 32.52%);
+        }
+
+        .top .h1 {
+          margin-top: 0;
+        }
+
+        .top h6 {
+          margin-top: 0;
+          color: #a9d9ff;
+          font-size: 40px;
+          line-height: 119%;
+          letter-spacing: -0.8px;
+        }
+
+        .top .btns-wrapper {
+          margin-top: 32px;
+          gap: 12px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .top {
+          padding: 80px 24px 25px;
+        }
+
+        .top h6 {
+          margin-top: 12px;
+          font-size: 17px;
+          line-height: 134%;
+        }
+
+        .top .btns-wrapper {
+          gap: 10px;
+        }
+
+        .top .btns-wrapper .btn {
+          -webkit-box-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          height: 44px;
+        }
+
+        .top .down-link {
+          font-size: 13px;
+          line-height: 137%;
+          text-shadow: none;
+        }
+      }
     </style>
     <link
       rel="preload"
