@@ -394,6 +394,32 @@ template {
   display: none;
 }
 
+@font-face {
+  font-family: 'Grato Classic';
+  src: url('../fonts/Gratimo Classic R.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 20%;
+  line-gap-override: 0%;
+  size-adjust: 104%;
+}
+
+@font-face {
+  font-family: 'Grato Classic';
+  src: url('../fonts/Gratimo Classic M.woff2') format('woff2');
+  font-weight: 500;
+  font-style: normal;
+
+  font-display: swap;
+  ascent-override: 92%;
+  descent-override: 20%;
+  line-gap-override: 0%;
+  size-adjust: 104%;
+}
+
 :root {
   --color: #38291e;
   --color-2: #f7f4f2;
@@ -404,7 +430,23 @@ template {
 }
 
 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
   scroll-behavior: smooth !important;
+}
+
+body {
+  min-height: 100vh;
+  font-family: 'Grato Classic';
+  font-style: normal;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 134%;
+  color: var(--color);
+  background-color: var(--color-2);
+  overflow-x: hidden;
 }
 
 body.freeze {
@@ -1379,7 +1421,7 @@ input[type='number']::-webkit-outer-spin-button {
   -ms-flex-align: end;
   align-items: flex-end;
   background-image: url('../img/img14-min.jpg');
-  background-image:url('../img/img14-min.webp');
+  background-image: url('../img/img14-min.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -2218,7 +2260,7 @@ input[type='number']::-webkit-outer-spin-button {
   width: auto;
   height: 100%;
   background-image: url('../img/img27-min.png');
-  background-image:url('../img/img27-min.webp');
+  background-image: url('../img/img27-min.webp');
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
