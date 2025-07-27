@@ -1,6 +1,214 @@
 <!DOCTYPE html>
 <html lang="ru">
- 
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="format-detection" content="email=no" />
+    <title>Арфа Парк</title>
+    <meta name="theme-color" content="#fff" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon" />
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png" />
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png" />
+    <link rel="apple-touch-icon-precomposed" href="img/favicons/apple-touch-icon-precomposed.png" />
+    <link rel="apple-touch-icon" href="img/favicons/apple-touch-icon.png" />
+    <link rel="apple-touch-icon" sizes="57x57" href="img/favicons/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="img/favicons/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicons/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="img/favicons/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicons/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="img/favicons/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="img/favicons/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="img/favicons/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="167x167" href="img/favicons/apple-touch-icon-167x167.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon-180x180.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="1024x1024"
+      href="img/favicons/apple-touch-icon-1024x1024.png"
+    />
+    <script>
+      // let visits = parseInt(localStorage.getItem('site_visits') || '0', 10);
+      // visits += 1;
+      // localStorage.setItem('site_visits', visits);
+
+      // const isEven = visits % 2 === 0;
+      // localStorage.setItem('isEvenVisit', isEven.toString());
+    </script>
+    <script>
+      // document.addEventListener('DOMContentLoaded', () => {
+      //   const isEven = localStorage.getItem('isEvenVisit') === 'true';
+      //   const img = document.getElementById('intro-image');
+      //   const top = document.querySelector('.top');
+
+      //   if (img) {
+      //     img.srcset = isEven ? 'img/img5.jpg' : 'img/img38.jpg';
+      //     top.style.background = isEven
+      //       ? 'linear-gradient(90deg, #0089D1, #008CD5 10%, #007FCE 40%)'
+      //       : '#2a86cf';
+      //   }
+      // });
+    </script>
+    <style>
+      .btn span {
+        -webkit-font-feature-settings: 'case' on;
+        font-feature-settings: 'case' on;
+        font-size: 14px;
+        font-weight: 500;
+        letter-spacing: 1.26px;
+        text-transform: uppercase;
+        white-space: nowrap;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        padding: 54px 56px 32px;
+        width: 100%;
+      }
+
+      .header .logo {
+        width: 120px;
+        height: 40px;
+        display: block;
+      }
+
+      .header .logo svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .top {
+        position: relative;
+        z-index: 10;
+        min-height: 100dvh;
+        padding: 116px 56px 54px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+
+      .top .section-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -10;
+        width: 100%;
+        height: 100%;
+        display: block;
+        overflow: hidden;
+      }
+
+      .top .section-img img,
+      .top .section-img source {
+        width: 100%;
+        height: 100%;
+        -o-object-fit: cover;
+        object-fit: cover;
+      }
+
+      .top .section-img::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: -webkit-gradient(
+          linear,
+          right top,
+          left top,
+          color-stop(20%, rgba(52, 191, 255, 0)),
+          color-stop(60%, rgba(15, 127, 166, 0.25)),
+          to(rgba(2, 105, 136, 0.4))
+        );
+        background: -o-linear-gradient(
+          right,
+          rgba(52, 191, 255, 0) 20%,
+          rgba(15, 127, 166, 0.25) 60%,
+          rgba(2, 105, 136, 0.4) 100%
+        );
+        background: linear-gradient(
+          270deg,
+          rgba(52, 191, 255, 0) 20%,
+          rgba(15, 127, 166, 0.25) 60%,
+          rgba(2, 105, 136, 0.4) 100%
+        );
+      }
+
+      .top .h1 {
+        max-width: 810px;
+        margin-top: auto;
+        color: #ffffff;
+      }
+
+      .top h6 {
+        margin-top: 21px;
+        max-width: 810px;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 143%;
+        letter-spacing: -0.24px;
+      }
+
+      .top .btns-wrapper {
+        margin-top: 56px;
+        padding-bottom: 24px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        gap: 16px;
+      }
+
+      .top .down-link {
+        display: block;
+        margin-top: auto;
+        color: #fff;
+        text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.17);
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 134%;
+        text-decoration: none;
+        scroll-behavior: smooth !important;
+      }
+    </style>
+    <link
+      rel="preload"
+      href="styles/main-autoprefix.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript><link rel="stylesheet" href="styles/main-autoprefix.min.css" /></noscript>
+    <link
+      rel="preload"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    </noscript>
+  </head>
   <body>
     <header class="header">
       <a class="logo" href="index.html">
