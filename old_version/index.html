@@ -58,8 +58,42 @@
       body {
         margin: 0;
       }
-      
-      .btn span {
+
+      .blur-load {
+        background-size: cover;
+        background-position: center;
+        backdrop-filter: blur(5px);
+      }
+
+      .blur-load.loaded > img {
+        opacity: 1;
+      }
+
+      .blur-load > img {
+        opacity: 0;
+        transition: all 0.2s ease-in-out;
+      }
+
+      .btn {
+        position: relative;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 17px 28px;
+        height: 53px;
+        text-decoration: none;
+        -webkit-transition: 0.3s;
+        -o-transition: 0.3s;
+        transition: 0.3s;
+      }
+
+      .btn {
         -webkit-font-feature-settings: 'case' on;
         font-feature-settings: 'case' on;
         font-size: 14px;
@@ -70,6 +104,26 @@
         -webkit-transition: 0.3s;
         -o-transition: 0.3s;
         transition: 0.3s;
+        border: 0;
+        outline: none;
+      }
+
+      .btn.btn--white2 {
+        background: #fff;
+      }
+
+      .btn.btn--white2 {
+        color: #017196;
+      }
+
+      .btn.btn--transparent {
+        background: #ffffff40;
+        -webkit-backdrop-filter: blur(35px);
+        backdrop-filter: blur(35px);
+      }
+
+      .btn.btn--transparent {
+        color: #ffffff;
       }
 
       .header {
@@ -214,6 +268,36 @@
           background-color: #2a86cf;
         }
 
+        .btn.btn--white2 {
+          border-radius: 900px;
+          background: #62baffa3;
+          -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+        }
+
+        .btn.btn--white2:hover {
+          background: #ffffff;
+        }
+
+        .btn.btn--white2 {
+          color: #ffffff;
+        }
+
+        .btn.btn--white2:hover {
+          color: #017196;
+        }
+
+        .btn.btn--transparent {
+          border-radius: 900px;
+          background: transparent;
+          border: 1px solid rgba(255, 255, 255, 0.25);
+        }
+
+        .btn.btn--transparent:hover {
+          background: transparent;
+          border: 1px solid rgba(70, 70, 70, 0.25);
+        }
+
         .top .section-img {
           top: 380px;
           width: 100%;
@@ -255,6 +339,24 @@
           padding: 80px 24px 25px;
         }
 
+        .btn.btn--white2 {
+          padding: 14px 20px;
+        }
+
+        .btn.btn--white2 {
+          font-size: 12px;
+          letter-spacing: 1.08px;
+        }
+
+        .btn.btn--transparent {
+          padding: 14px 20px;
+        }
+
+        .btn.btn--transparent span {
+          font-size: 12px;
+          letter-spacing: 1.08px;
+        }
+
         .top h6 {
           margin-top: 12px;
           font-size: 17px;
@@ -279,6 +381,13 @@
         }
       }
     </style>
+    <noscript>
+      <style>
+        .blur-load > img {
+          opacity: 1;
+        }
+      </style>
+    </noscript>
     <link
       rel="preload"
       href="styles/main-autoprefix.min.css"
@@ -557,16 +666,20 @@
         <picture class="section-img">
           <!-- <source srcset="img/img5-min.webp" media="(max-width: 768px)"> -->
           <source srcset="img/img38-min.webp" media="(max-width: 1200px)" id="intro-image" />
-          <img src="img/img5-min.webp" fetchpriority="high" alt="#" />
+          <img loading="lazy" src="img/img5-min.webp" fetchpriority="high" alt="#" />
         </picture>
-        <h1 class="h1">Готовые виллы премиум класса в&nbsp;закрытом коттеджном посёлке</h1>
+        <h1 class="h1">
+          Готовые виллы премиум класса в&nbsp;
+          <span class="no-wrap">закрытом коттеджном</span>
+          посёлке
+        </h1>
         <h6 class=" ">
           Располагаются на&nbsp;берегу Чёрного моря в&nbsp;Сириус-Сочи. Виллы с&nbsp;отделкой
           и&nbsp;мебелью. Выбирайте свою и&nbsp;заселяйтесь.
         </h6>
         <div class="btns-wrapper">
-          <button class="btn btn--white2 request-btn">
-            <span>Оставить заявку</span>
+          <button class="btn btn--white2 request-btn modal-button" data-href="request">
+            Оставить заявку
           </button>
           <button class="btn btn--transparent watch-video-btn">
             <span>Смотреть видео</span>
@@ -640,8 +753,11 @@
       </div>
       <section class="flow flow1" id="flow1" data-flow-index="0">
         <h2 class="visually-hidden">flow1</h2>
-        <picture class="img1 picture--hide picture--hide-right flow1-img">
-          <img src="img/img19-min.webp" alt="#" />
+        <picture
+          class="img1 picture--hide picture--hide-right flow1-img blur-load"
+          style="--scroll-percent: 100"
+        >
+          <img loading="lazy" src="img/img19-min.webp" alt="#" />
         </picture>
         <div class="txt-wrapper txt-wrapper--right">
           <h6 class=" ">23</h6>
@@ -668,8 +784,11 @@
           <span class="frame2"></span>
           <span class="frame3"></span>
         </div>
-        <picture class="img2 picture--hide picture--hide-left flow1-img">
-          <img src="img/img20-min.webp" alt="#" />
+        <picture
+          class="img2 picture--hide picture--hide-left flow1-img blur-load"
+          style="--scroll-percent: 100"
+        >
+          <img loading="lazy" src="img/img20-min.webp" alt="#" />
         </picture>
       </section>
       <section class="about">
@@ -813,8 +932,8 @@
                     <span>25&nbsp;мин</span>
                   </p>
                 </div>
-                <picture>
-                  <img src="img/img10-min.webp" alt="#" />
+                <picture class="blur-load">
+                  <img loading="lazy" src="img/img10-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -882,8 +1001,8 @@
                     <span>25&nbsp;мин</span>
                   </p>
                 </div>
-                <picture>
-                  <img src="img/img11-min.webp" alt="#" />
+                <picture class="blur-load">
+                  <img loading="lazy" src="img/img11-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -951,8 +1070,8 @@
                     <span>25&nbsp;мин</span>
                   </p>
                 </div>
-                <picture>
-                  <img src="img/img12-min.webp" alt="#" />
+                <picture class="blur-load">
+                  <img loading="lazy" src="img/img12-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -1020,8 +1139,8 @@
                     <span>25&nbsp;мин</span>
                   </p>
                 </div>
-                <picture>
-                  <img src="img/img13-min.webp" alt="#" />
+                <picture class="blur-load">
+                  <img loading="lazy" src="img/img13-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -1089,8 +1208,8 @@
                     <span>25&nbsp;мин</span>
                   </p>
                 </div>
-                <picture>
-                  <img src="img/img10-min.webp" alt="#" />
+                <picture class="blur-load">
+                  <img loading="lazy" src="img/img10-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -1158,8 +1277,8 @@
                     <span>25&nbsp;мин</span>
                   </p>
                 </div>
-                <picture>
-                  <img src="img/img11-min.webp" alt="#" />
+                <picture class="blur-load">
+                  <img loading="lazy" src="img/img11-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -1227,8 +1346,8 @@
                     <span>25&nbsp;мин</span>
                   </p>
                 </div>
-                <picture>
-                  <img src="img/img12-min.webp" alt="#" />
+                <picture class="blur-load">
+                  <img loading="lazy" src="img/img12-min.webp" alt="#" />
                 </picture>
               </li>
               <li class="swiper-slide">
@@ -1296,8 +1415,8 @@
                     <span>25&nbsp;мин</span>
                   </p>
                 </div>
-                <picture>
-                  <img src="img/img13-min.webp" alt="#" />
+                <picture class="blur-load">
+                  <img loading="lazy" src="img/img13-min.webp" alt="#" />
                 </picture>
               </li>
             </ul>
@@ -1371,20 +1490,29 @@
             </a>
           </div>
           <div class="map" id="about-map">
-            <img class="map__imge" draggable="false" src="img/map-desktop-min.webp" alt="map" />
+            <div class="blur-load">
+              <img class="map__imge" draggable="false" src="img/map-desktop-min.webp" alt="map" />
+            </div>
           </div>
           <div class="map-ipad" id="about-map-ipad">
-            <img class="map__imge" draggable="false" src="img/map-tablet-min.webp" alt="map" />
+            <div class="blur-load">
+              <img class="map__imge" draggable="false" src="img/map-tablet-min.webp" alt="map" />
+            </div>
           </div>
 
           <div class="map-mobile" id="about-map-mobile">
-            <img class="map__imge" draggable="false" src="img/map-mobile-min.webp" alt="map" />
+            <div class="blur-load">
+              <img class="map__imge" draggable="false" src="img/map-mobile-min.webp" alt="map" />
+            </div>
           </div>
         </div>
       </section>
       <section class="flow flow2" data-flow-index="1">
-        <picture class="img1 picture--hide picture--hide-right flow2-img">
-          <img src="img/img21-min.webp" alt="#" />
+        <picture
+          class="img1 picture--hide picture--hide-right flow2-img blur-load"
+          style="--scroll-percent: 100"
+        >
+          <img loading="lazy" src="img/img21-min.webp" alt="#" />
         </picture>
         <div class="txt-wrapper">
           <h2 class="h2">
@@ -1396,18 +1524,27 @@
             с&nbsp;другом виллы, у&nbsp;каждой отдельная парковочная зона, индивидуальный бассейн
             и&nbsp;выход в&nbsp;сад.
           </p>
-          <button class="btn btn--brown request-btn">
-            <span>Оставить заявку</span>
+          <button class="btn btn--brown request-btn modal-button" data-href="request">
+            Оставить заявку
           </button>
         </div>
-        <picture class="img2 picture--hide picture--hide-left flow2-img">
-          <img src="img/img22-min.webp" alt="#" />
+        <picture
+          class="img2 picture--hide picture--hide-left flow2-img blur-load"
+          style="--scroll-percent: 100"
+        >
+          <img loading="lazy" src="img/img22-min.webp" alt="#" />
         </picture>
-        <picture class="img3 picture--hide picture--hide-right flow2-img">
-          <img src="img/img23-min.webp" alt="#" />
+        <picture
+          class="img3 picture--hide picture--hide-right flow2-img blur-load"
+          style="--scroll-percent: 100"
+        >
+          <img loading="lazy" src="img/img23-min.webp" alt="#" />
         </picture>
-        <picture class="img4 picture--hide picture--hide-left flow2-img">
-          <img src="img/img40-min.webp" alt="#" />
+        <picture
+          class="img4 picture--hide picture--hide-left flow2-img blur-load"
+          style="--scroll-percent: 100"
+        >
+          <img loading="lazy" src="img/img40-min.webp" alt="#" />
         </picture>
       </section>
       <section class="layouts">
@@ -1440,213 +1577,213 @@
         </div>
         <div class="content-banner">
           <div class="resolution-btns">
-            <button class="btn-3d active">3D</button>
-            <button class="btn-2d">2D</button>
+            <button class="btn-3d active" data-direction="to-left">3D</button>
+            <button class="btn-2d" data-direction="to-right">2D</button>
           </div>
           <div class="content-slider">
             <div class="swiper-wrapper">
               <div class="swiper-slide swiper-slide--1 to-left">
                 <div class="left">
-                  <picture class="img-wrapper">
+                  <picture class="img-wrapper blur-load">
                     <img src="img/img28-min.webp" alt="#" />
-                    <span class="size size-1">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        25 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size size-2">
-                      <span class="txt">Терраса</span>
-                      <span class="num">
-                        25 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size size-3">
-                      <span class="txt">Гостиная</span>
-                      <span class="num">
-                        95 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size size-4">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        20 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size size-5">
-                      <span class="txt">Кухня-столовая</span>
-                      <span class="num">
-                        25 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
                   </picture>
+                  <span class="size size-1">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      25 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size size-2">
+                    <span class="txt">Терраса</span>
+                    <span class="num">
+                      25 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size size-3">
+                    <span class="txt">Гостиная</span>
+                    <span class="num">
+                      95 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size size-4">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      20 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size size-5">
+                    <span class="txt">Кухня-столовая</span>
+                    <span class="num">
+                      25 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
                 </div>
                 <div class="right">
-                  <picture class="img-wrapper">
+                  <picture class="img-wrapper blur-load">
                     <img src="img/img31-min.webp" alt="#" />
-                    <span class="size-box size-box-1">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        25 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size-box size-box-2">
-                      <span class="txt">Терраса</span>
-                      <span class="num">
-                        25 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size-box size-box-3">
-                      <span class="txt">Гостиная</span>
-                      <span class="num">
-                        95 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size-box size-box-4">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        20 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size-box size-box-5">
-                      <span class="txt">Кухня-столовая</span>
-                      <span class="num">
-                        25 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
                   </picture>
+                  <span class="size-box size-box-1">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      25 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size-box size-box-2">
+                    <span class="txt">Терраса</span>
+                    <span class="num">
+                      25 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size-box size-box-3">
+                    <span class="txt">Гостиная</span>
+                    <span class="num">
+                      95 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size-box size-box-4">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      20 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size-box size-box-5">
+                    <span class="txt">Кухня-столовая</span>
+                    <span class="num">
+                      25 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
                 </div>
               </div>
               <div class="swiper-slide swiper-slide--2 to-left">
                 <div class="left">
-                  <picture class="img-wrapper">
+                  <picture class="img-wrapper blur-load">
                     <img src="img/img29-min.webp" alt="#" />
-                    <span class="size size-1">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        25 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size size-2">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        25 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size size-3">
-                      <span class="txt">Терраса</span>
-                      <span class="num">
-                        30 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size size-4">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        20 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size size-5">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        25 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
                   </picture>
+                  <span class="size size-1">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      25 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size size-2">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      25 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size size-3">
+                    <span class="txt">Терраса</span>
+                    <span class="num">
+                      30 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size size-4">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      20 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size size-5">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      25 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
                 </div>
                 <div class="right">
-                  <picture class="img-wrapper">
+                  <picture class="img-wrapper blur-load">
                     <img src="img/img32-min.webp" alt="#" />
-                    <span class="size-box size-box-1">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        25 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size-box size-box-2">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        25 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size-box size-box-3">
-                      <span class="txt">Терраса</span>
-                      <span class="num">
-                        30 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size-box size-box-4">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        20 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size-box size-box-5">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        25 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
                   </picture>
+                  <span class="size-box size-box-1">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      25 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size-box size-box-2">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      25 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size-box size-box-3">
+                    <span class="txt">Терраса</span>
+                    <span class="num">
+                      30 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size-box size-box-4">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      20 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size-box size-box-5">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      25 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
                 </div>
               </div>
               <div class="swiper-slide swiper-slide--3 to-left">
                 <div class="left">
-                  <picture class="img-wrapper">
+                  <picture class="img-wrapper blur-load">
                     <img src="img/img30-min.webp" alt="#" />
-                    <span class="size size-1">
-                      <span class="txt">Терраса</span>
-                      <span class="num">
-                        146 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size size-2">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        30 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
                   </picture>
+                  <span class="size size-1">
+                    <span class="txt">Терраса</span>
+                    <span class="num">
+                      146 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size size-2">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      30 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
                 </div>
                 <div class="right">
-                  <picture class="img-wrapper">
+                  <picture class="img-wrapper blur-load">
                     <img src="img/img33-min.webp" alt="#" />
-                    <span class="size-box size-box-1">
-                      <span class="txt">Терраса</span>
-                      <span class="num">
-                        146 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
-                    <span class="size-box size-box-2">
-                      <span class="txt">Спальня</span>
-                      <span class="num">
-                        30 м
-                        <sup>2</sup>
-                      </span>
-                    </span>
                   </picture>
+                  <span class="size-box size-box-1">
+                    <span class="txt">Терраса</span>
+                    <span class="num">
+                      146 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
+                  <span class="size-box size-box-2">
+                    <span class="txt">Спальня</span>
+                    <span class="num">
+                      30 м
+                      <sup>2</sup>
+                    </span>
+                  </span>
                 </div>
               </div>
             </div>
@@ -1667,17 +1804,17 @@
         </div>
         <div class="photo-slider photo-slider--z1000">
           <ul class="swiper-wrapper">
-            <li class="swiper-slide">
-              <img src="img/img34-min.webp" alt="#" />
+            <li class="swiper-slide blur-load">
+              <img loading="lazy" src="img/img34-min.webp" alt="#" />
             </li>
-            <li class="swiper-slide">
-              <img src="img/img35-min.webp" alt="#" />
+            <li class="swiper-slide blur-load">
+              <img loading="lazy" src="img/img35-min.webp" alt="#" />
             </li>
-            <li class="swiper-slide">
-              <img src="img/img24-min.webp" alt="#" />
+            <li class="swiper-slide blur-load">
+              <img loading="lazy" src="img/img24-min.webp" alt="#" />
             </li>
-            <li class="swiper-slide">
-              <img src="img/img25-min.webp" alt="#" />
+            <li class="swiper-slide blur-load">
+              <img loading="lazy" src="img/img25-min.webp" alt="#" />
             </li>
           </ul>
         </div>
@@ -1685,17 +1822,17 @@
           <div class="photo-slider-thumbs">
             <div class="active-marker"></div>
             <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <img src="img/img34-min.webp" alt="#" />
+              <li class="swiper-slide blur-load">
+                <img loading="lazy" src="img/img34-min.webp" alt="#" />
               </li>
-              <li class="swiper-slide">
-                <img src="img/img35-min.webp" alt="#" />
+              <li class="swiper-slide blur-load">
+                <img loading="lazy" src="img/img35-min.webp" alt="#" />
               </li>
-              <li class="swiper-slide">
-                <img src="img/img24-min.webp" alt="#" />
+              <li class="swiper-slide blur-load">
+                <img loading="lazy" src="img/img24-min.webp" alt="#" />
               </li>
-              <li class="swiper-slide">
-                <img src="img/img25-min.webp" alt="#" />
+              <li class="swiper-slide blur-load">
+                <img loading="lazy" src="img/img25-min.webp" alt="#" />
               </li>
             </ul>
           </div>
@@ -1784,8 +1921,8 @@
         </button>
       </div>
       <section class="builder">
-        <picture class="section-img">
-          <img src="img/img4-min.webp" alt="#" />
+        <picture class="section-img blur-load">
+          <img loading="lazy" src="img/img4-min.webp" alt="#" />
         </picture>
         <div class="txt-wrapper">
           <h2 class="h3">
@@ -1796,8 +1933,8 @@
             <span>Выбрать виллу</span>
           </a>
           <div class="builder-wrapper">
-            <picture class="icon">
-              <img src="img/icon-min.webp" alt="#" />
+            <picture class="icon blur-load">
+              <img loading="lazy" src="img/icon-min.webp" alt="#" />
             </picture>
             <p>
               ESTA Costruction - генеральный подрядчик комплекса арфа парк отеля. входит
@@ -1821,23 +1958,35 @@
             <span>Выбрать виллу</span>
           </a>
         </div>
-        <picture class="img1 picture--hide picture--hide-left flow3-img">
-          <img src="img/img24-min.webp" alt="#" />
+        <picture
+          class="img1 picture--hide picture--hide-left flow3-img blur-load"
+          style="--scroll-percent: 100"
+        >
+          <img loading="lazy" src="img/img24-min.webp" alt="#" />
 
           <p>Просторная гостиная на&nbsp;2-м этаже</p>
         </picture>
-        <picture class="img2 picture--hide picture--hide-right flow3-img">
-          <img src="img/img25-min.webp" alt="#" />
+        <picture
+          class="img2 picture--hide picture--hide-right flow3-img blur-load"
+          style="--scroll-percent: 100"
+        >
+          <img loading="lazy" src="img/img25-min.webp" alt="#" />
 
           <p>Просторная гостиная на&nbsp;2-м этаже</p>
         </picture>
-        <picture class="img3 picture--hide picture--hide-left flow3-img">
-          <img src="img/img26-min.webp" alt="#" />
+        <picture
+          class="img3 picture--hide picture--hide-left flow3-img blur-load"
+          style="--scroll-percent: 100"
+        >
+          <img loading="lazy" src="img/img26-min.webp" alt="#" />
 
           <p>Просторная гостиная на&nbsp;2-м этаже</p>
         </picture>
-        <picture class="img4 picture--hide picture--hide-right flow3-img">
-          <img src="img/img41-min.webp" alt="#" />
+        <picture
+          class="img4 picture--hide picture--hide-right flow3-img blur-load"
+          style="--scroll-percent: 100"
+        >
+          <img loading="lazy" src="img/img41-min.webp" alt="#" />
 
           <p>Просторная гостиная на&nbsp;2-м этаже</p>
         </picture>
@@ -1853,8 +2002,8 @@
           </h6>
           <ul class="main-list">
             <li>
-              <picture class="img-wrapper">
-                <img src="img/img6-min.webp" alt="#" />
+              <picture class="img-wrapper blur-load">
+                <img loading="lazy" src="img/img6-min.webp" alt="#" />
               </picture>
               <h6 class=" ">Вечнозелёный парк и&nbsp;песчаный пляж</h6>
               <p class=" ">
@@ -1863,8 +2012,8 @@
               </p>
             </li>
             <li>
-              <picture class="img-wrapper">
-                <img src="img/img7-min.webp" alt="#" />
+              <picture class="img-wrapper blur-load">
+                <img loading="lazy" src="img/img7-min.webp" alt="#" />
               </picture>
               <h6 class=" ">Рестораны и&nbsp;бары</h6>
               <p class=" ">
@@ -1874,8 +2023,8 @@
               </p>
             </li>
             <li>
-              <picture class="img-wrapper">
-                <img src="img/img8-min.webp" alt="#" />
+              <picture class="img-wrapper blur-load">
+                <img loading="lazy" src="img/img8-min.webp" alt="#" />
               </picture>
               <h6 class=" ">SPA</h6>
               <p class=" ">
@@ -1885,8 +2034,8 @@
               </p>
             </li>
             <li>
-              <picture class="img-wrapper">
-                <img src="img/img9-min.webp" alt="#" />
+              <picture class="img-wrapper blur-load">
+                <img loading="lazy" src="img/img9-min.webp" alt="#" />
               </picture>
               <h6 class=" ">Детям</h6>
               <p class=" ">
@@ -1901,34 +2050,34 @@
         <div class="villas-top">
           <h2 class="h3">Выберите виллу</h2>
           <p class=" ">Ниже представлены доступные к продаже виллы</p>
-          <button class="btn btn--brown request-btn">
-            <span>Оставить заявку</span>
+          <button class="btn btn--brown request-btn modal-button" data-href="request">
+            Оставить заявку
           </button>
           <div class="tabs-wrapper">
-            <div class="tab active">
+            <div class="tab active" data-target-element="villa1">
               <p>Вилла №1</p>
               <h6>2к5</h6>
             </div>
-            <div class="tab">
+            <div class="tab" data-target-element="villa2">
               <p>Вилла №2</p>
               <h6>2к6</h6>
             </div>
-            <div class="tab">
+            <div class="tab" data-target-element="villa3">
               <p>Вилла №3</p>
               <h6>2к11</h6>
             </div>
           </div>
         </div>
         <div class="villas-map">
-          <picture class="placemark-pic active">
+          <picture class="placemark-pic active" id="villa1-map blur-load">
             <source srcset="img/111a-mob-min.webp" media="(max-width: 600px)" />
             <img src="img/111a-min.webp" alt="#" />
           </picture>
-          <picture class="placemark-pic hidden">
+          <picture class="placemark-pic hidden" id="villa2-map blur-load">
             <source srcset="img/111b-mob-min.webp" media="(max-width: 600px)" />
             <img src="img/111b-min.webp" alt="#" />
           </picture>
-          <picture class="placemark-pic hidden">
+          <picture class="placemark-pic hidden" id="villa3-map blur-load">
             <source srcset="img/111c-mob-min.webp" media="(max-width: 600px)" />
             <img src="img/111c-min.webp" alt="#" />
           </picture>
@@ -1994,7 +2143,7 @@
           </div>
         </div>
         <div class="villas-bottom" data-lenis-prevent>
-          <div class="content active">
+          <div class="content active" id="villa1-content">
             <h6 class="price">
               120&nbsp;500&nbsp;000
               <span>₽</span>
@@ -2040,11 +2189,11 @@
                 <h6>Полная</h6>
               </li>
             </ul>
-            <button class="request-btn btn btn--brown">
-              <span>Оставить заявку</span>
+            <button data-href="request" class="request-btn modal-button btn btn--brown">
+              Оставить заявку
             </button>
           </div>
-          <div class="content hidden">
+          <div class="content hidden" id="villa2-content">
             <h6 class="price">
               220 500 000
               <span>₽</span>
@@ -2090,11 +2239,11 @@
                 <h6>Полная</h6>
               </li>
             </ul>
-            <button class="request-btn btn btn--brown">
-              <span>Оставить заявку</span>
+            <button data-href="request" class="request-btn modal-button btn btn--brown">
+              Оставить заявку
             </button>
           </div>
-          <div class="content hidden">
+          <div class="content hidden" id="villa3-content">
             <h6 class="price">
               320 500 000
               <span>₽</span>
@@ -2140,15 +2289,15 @@
                 <h6>Полная</h6>
               </li>
             </ul>
-            <button class="request-btn btn btn--brown">
-              <span>Оставить заявку</span>
+            <button data-href="request" class="request-btn modal-button btn btn--brown">
+              Оставить заявку
             </button>
           </div>
         </div>
       </section>
       <section class="test">
-        <picture class="section-img">
-          <img src="img/img3-min.webp" alt="#" />
+        <picture class="section-img blur-load">
+          <img loading="lazy" src="img/img3-min.webp" alt="#" />
         </picture>
         <div class="container">
           <div class="txt-wrapper">
@@ -2173,45 +2322,39 @@
           </h2>
           <ul class="news-list">
             <li>
-              <picture class="img-wrapper">
-                <img src="img/img-min.webp" alt="#" />
+              <picture class="img-wrapper blur-load">
+                <img loading="lazy" src="img/img-min.webp" alt="#" />
               </picture>
               <div class="txt-wrapper">
                 <p class=" ">01.05.2025</p>
                 <h6 class=" ">
                   -10% на&nbsp;бронирование номера в&nbsp;вилле от&nbsp;5&nbsp;ночей
                 </h6>
-                <button class="btn btn--white1 news-btn">
-                  <span>Подробнее</span>
-                </button>
+                <button class="btn btn--white1 modal-button" data-href="news">Подробнее</button>
               </div>
             </li>
             <li>
-              <picture class="img-wrapper">
-                <img src="img/img1-min.webp" alt="#" />
+              <picture class="img-wrapper blur-load">
+                <img loading="lazy" src="img/img1-min.webp" alt="#" />
               </picture>
               <div class="txt-wrapper">
                 <p class=" ">01.05.2025</p>
                 <h6 class=" ">
                   -10% на&nbsp;бронирование номера в&nbsp;вилле от&nbsp;5&nbsp;ночей
                 </h6>
-                <button class="btn btn--white1 news-btn">
-                  <span>Подробнее</span>
-                </button>
+                <button class="btn btn--white1 modal-button" data-href="news">Подробнее</button>
               </div>
             </li>
             <li>
-              <picture class="img-wrapper">
-                <img src="img/img2-min.webp" alt="#" />
+              <picture class="img-wrapper blur-load">
+                <img loading="lazy" src="img/img2-min.webp" alt="#" />
               </picture>
               <div class="txt-wrapper">
                 <p class=" ">01.05.2025</p>
                 <h6 class=" ">
                   -10% на&nbsp;бронирование номера в&nbsp;вилле от&nbsp;5&nbsp;ночей
                 </h6>
-                <button class="btn btn--white1 news-btn">
-                  <span>Подробнее</span>
-                </button>
+                <button class="btn btn--white1 modal-button" data-href="news">Подробнее</button>
               </div>
             </li>
           </ul>
@@ -2835,9 +2978,12 @@
         </ul>
       </section>
       <div class="flow flow4" data-flow-index="3">
-        <picture class="contacts-img picture--hide picture--hide-footer flow4-img">
+        <picture
+          class="contacts-img picture--hide picture--hide-footer flow4-img blur-load"
+          style="--scroll-percent: 100"
+        >
           <source srcset="img/img39-min.webp" media="(max-width: 600px)" />
-          <img src="img/img15-min.webp" alt="#" />
+          <img loading="lazy" src="img/img15-min.webp" alt="#" />
         </picture>
       </div>
     </main>
@@ -2888,8 +3034,8 @@
             </g>
           </svg>
         </button>
-        <picture class="img-wrapper">
-          <img src="img/img-min.webp" alt="#" />
+        <picture class="img-wrapper blur-load">
+          <img loading="lazy" src="img/img-min.webp" alt="#" />
         </picture>
         <div class="txt-wrapper">
           <div class="title-wrapper">
@@ -2909,17 +3055,17 @@
           <div class="inner-wrapper">
             <div class="modal-news-slider">
               <ul class="swiper-wrapper">
-                <li class="swiper-slide">
-                  <img src="img/img1-min.webp" alt="#" />
+                <li class="swiper-slide blur-load">
+                  <img loading="lazy" src="img/img1-min.webp" alt="#" />
                 </li>
-                <li class="swiper-slide">
-                  <img src="img/img2-min.webp" alt="#" />
+                <li class="swiper-slide blur-load">
+                  <img loading="lazy" src="img/img2-min.webp" alt="#" />
                 </li>
-                <li class="swiper-slide">
-                  <img src="img/img3-min.webp" alt="#" />
+                <li class="swiper-slide blur-load">
+                  <img loading="lazy" src="img/img3-min.webp" alt="#" />
                 </li>
-                <li class="swiper-slide">
-                  <img src="img/img4-min.webp" alt="#" />
+                <li class="swiper-slide blur-load">
+                  <img loading="lazy" src="img/img4-min.webp" alt="#" />
                 </li>
               </ul>
             </div>
@@ -2981,7 +3127,7 @@
         </div>
       </div>
     </div>
-    <div class="modal modal--request">
+    <div class="modal modal--request" data-lenis-prevent>
       <div class="request-wrapper">
         <div class="left-wrapper">
           <button class="close-btn">
@@ -3164,8 +3310,8 @@
             </button>
           </div>
           <div class="bottom-wrapper">
-            <picture>
-              <img src="img/img36-min.webp" alt="#" />
+            <picture class="blur-load">
+              <img loading="lazy" src="img/img36-min.webp" alt="#" />
             </picture>
             <p class="whois">Менеджер Арфа Парка по&nbsp;работе с&nbsp;клиентами</p>
             <p class="name">Попова Екатерина</p>
@@ -3175,7 +3321,7 @@
     </div>
     <div class="modal-overlay"></div>
     <button type="button" class="to-top-button hide">
-      <img src="img/to-top.svg" alt="to top" width="24" height="24" />
+      <img loading="lazy" src="img/to-top.svg" alt="↑" width="24" height="24" />
       <span>Наверх</span>
     </button>
 
@@ -3189,5 +3335,29 @@
         <button class="cookie-btn" id="cookieCloseButton">ПОНЯТНО</button>
       </div>
     </div>
+
+    <script>
+      const blurDivs = document.querySelectorAll('.blur-load');
+      console.log(blurDivs);
+
+      function loadeImg(div) {
+        div.classList.add('loaded');
+      }
+
+      blurDivs.forEach((div) => {
+        const img = div.querySelector('img');
+        const imgFilename = img.getAttribute('src').split('/').pop();
+
+        div.style.backgroundImage = `url(blur-bg/${imgFilename})`;
+
+        console.log(blurDivs);
+        if (img.complete) {
+          loadeImg(div);
+          return;
+        }
+
+        img.addEventListener('load', () => loadeImg(div));
+      });
+    </script>
   </body>
 </html>
