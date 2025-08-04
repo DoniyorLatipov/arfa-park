@@ -1599,8 +1599,8 @@ input[type='number']::-webkit-outer-spin-button {
 .flow2 {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 735px 1fr;
-  grid-template-columns: 735px 1fr;
+  -ms-grid-columns: 1fr 1.6fr;
+  grid-template-columns: 1fr 1.6fr;
   background-color: #ffffff;
   overflow: hidden;
   -ms-grid-row-align: end;
@@ -1655,8 +1655,6 @@ input[type='number']::-webkit-outer-spin-button {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  width: 865px;
-  height: 865px;
   aspect-ratio: 1/1;
 }
 
