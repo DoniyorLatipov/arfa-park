@@ -354,7 +354,6 @@ const sizesConteiner = document.querySelector('.layouts .content-banner .content
 
 sizesConteiner.addEventListener('click', (e) => {
   const el = e.target;
-  console.log(el);
 
   const isSize =
     e.target.classList.contains('size') ||
