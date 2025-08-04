@@ -5,13 +5,6 @@
 * Browsers: last 4 version
 */
 
-/*
-* Prefixed by https://autoprefixer.github.io
-* PostCSS: v8.4.14,
-* Autoprefixer: v10.4.7
-* Browsers: last 4 version
-*/
-
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -4412,77 +4405,6 @@ button.to-top-button span {
   text-decoration: none;
 }
 
-.cookie-banner {
-  position: fixed;
-  bottom: -100%;
-  opacity: 0;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  z-index: 1000;
-  max-width: 880px;
-  width: 100%;
-  padding: 30px;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.cookie-banner.active {
-  bottom: 0;
-  opacity: 1;
-}
-
-.cookie-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 18px;
-  padding: 15px 20px;
-  background-color: #fff;
-}
-
-.cookie-banner p {
-  color: #38291e;
-  font-size: 17px;
-  line-height: 134%;
-  font-weight: 400;
-  font-family: 'Grato Classic', sans-serif;
-}
-
-.cookie-banner a {
-  color: #2a57a0;
-  text-decoration: none;
-}
-
-.cookie-btn {
-  background-color: #38291e;
-  font-family: 'Grato Classic', sans-serif;
-  color: white;
-  border: none;
-  padding: 15px 28px;
-  cursor: pointer;
-  font-weight: 500;
-  font-size: 14px;
-  letter-spacing: 9%;
-  line-height: 100%;
-  -webkit-transition: 0.3s all ease-in-out;
-  -o-transition: 0.3s all ease-in-out;
-  transition: 0.3s all ease-in-out;
-}
-
-.cookie-btn:hover {
-  background-color: #e6dcd6;
-  color: #38291e;
-}
-
 .photo-slider--z1000 {
   z-index: 1000;
 }
@@ -4889,14 +4811,6 @@ button.to-top-button span {
   .news .news-list {
     -ms-grid-columns: 1fr 2px 1fr;
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cookie-container {
-    border-radius: 12px;
-  }
-
-  .cookie-btn {
-    border-radius: 33px;
   }
 
   .h1 {
@@ -5546,35 +5460,6 @@ button.to-top-button span {
 
   .new-wrapper .txt-wrapper .modal-news-slider .swiper-slide {
     aspect-ratio: 664/373.12;
-  }
-
-  .cookie-banner {
-    left: 0;
-    -webkit-transform: translateX(0);
-    -ms-transform: translateX(0);
-    transform: translateX(0);
-    padding: 0;
-  }
-
-  .cookie-container {
-    border-radius: 0;
-    padding: 18px 20px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    -webkit-box-align: start;
-    -ms-flex-align: start;
-    align-items: start;
-  }
-
-  .cookie-banner p {
-    font-size: 13px;
-  }
-
-  .cookie-btn {
-    font-size: 12px;
-    padding: 14px 20px;
   }
 
   .flow .picture--hide.picture--hide-footer::before,

@@ -247,6 +247,77 @@
         scroll-behavior: smooth !important;
       }
 
+      .cookie-banner {
+        position: fixed;
+        bottom: -100%;
+        opacity: 0;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        z-index: 1000;
+        max-width: 880px;
+        width: 100%;
+        padding: 30px;
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+
+      .cookie-banner.active {
+        bottom: 0;
+        opacity: 1;
+      }
+
+      .cookie-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        gap: 18px;
+        padding: 15px 20px;
+        background-color: #fff;
+      }
+
+      .cookie-banner p {
+        color: #38291e;
+        font-size: 17px;
+        line-height: 134%;
+        font-weight: 400;
+        font-family: 'Grato Classic', sans-serif;
+      }
+
+      .cookie-banner a {
+        color: #2a57a0;
+        text-decoration: none;
+      }
+
+      .cookie-btn {
+        background-color: #38291e;
+        font-family: 'Grato Classic', sans-serif;
+        color: white;
+        border: none;
+        padding: 15px 28px;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 14px;
+        letter-spacing: 9%;
+        line-height: 100%;
+        -webkit-transition: 0.3s all ease-in-out;
+        -o-transition: 0.3s all ease-in-out;
+        transition: 0.3s all ease-in-out;
+      }
+
+      .cookie-btn:hover {
+        background-color: #e6dcd6;
+        color: #38291e;
+      }
+
       @media (max-width: 1200px) {
         .header {
           padding: 36px 36px 20px;
@@ -329,6 +400,43 @@
           margin-top: 32px;
           gap: 12px;
         }
+
+        .cookie-container {
+          border-radius: 12px;
+        }
+
+        .cookie-btn {
+          border-radius: 33px;
+        }
+
+        .cookie-banner {
+          left: 0;
+          -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
+          transform: translateX(0);
+          padding: 0;
+        }
+
+        .cookie-container {
+          border-radius: 0;
+          padding: 18px 20px;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-direction: column;
+          flex-direction: column;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: start;
+        }
+
+        .cookie-banner p {
+          font-size: 13px;
+        }
+
+        .cookie-btn {
+          font-size: 12px;
+          padding: 14px 20px;
+        }
       }
 
       @media (max-width: 600px) {
@@ -387,11 +495,11 @@
     </noscript>
     <link
       rel="preload"
-      href="styles/main.css"
+      href="styles/main-autoprefix.min.css"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript><link rel="stylesheet" href="styles/main.css" /></noscript>
+    <noscript><link rel="stylesheet" href="styles/main-autoprefix.min.css" /></noscript>
     <link
       rel="preload"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -1488,18 +1596,36 @@
           </div>
           <div class="map" id="about-map">
             <div class="blur-load">
-              <img class="map__imge" draggable="false" src="img/map-desktop-min.webp" alt="map" />
+              <img
+                loading="lazy"
+                class="map__imge"
+                draggable="false"
+                src="img/map-desktop-min.webp"
+                alt="map"
+              />
             </div>
           </div>
           <div class="map-ipad" id="about-map-ipad">
             <div class="blur-load">
-              <img class="map__imge" draggable="false" src="img/map-tablet-min.webp" alt="map" />
+              <img
+                loading="lazy"
+                class="map__imge"
+                draggable="false"
+                src="img/map-tablet-min.webp"
+                alt="map"
+              />
             </div>
           </div>
 
           <div class="map-mobile" id="about-map-mobile">
             <div class="blur-load">
-              <img class="map__imge" draggable="false" src="img/map-mobile-min.webp" alt="map" />
+              <img
+                loading="lazy"
+                class="map__imge"
+                draggable="false"
+                src="img/map-mobile-min.webp"
+                alt="map"
+              />
             </div>
           </div>
         </div>
@@ -1582,7 +1708,7 @@
               <div class="swiper-slide swiper-slide--1 to-left">
                 <div class="left">
                   <picture class="img-wrapper blur-load">
-                    <img src="img/img28-min.webp" alt="#" />
+                    <img loading="lazy" src="img/img28-min.webp" alt="#" />
                   </picture>
                   <span class="size size-1">
                     <span class="txt">Спальня</span>
@@ -1622,7 +1748,7 @@
                 </div>
                 <div class="right">
                   <picture class="img-wrapper blur-load">
-                    <img src="img/img31-min.webp" alt="#" />
+                    <img loading="lazy" src="img/img31-min.webp" alt="#" />
                   </picture>
                   <span class="size-box size-box-1">
                     <span class="txt">Спальня</span>
@@ -1664,7 +1790,7 @@
               <div class="swiper-slide swiper-slide--2 to-left">
                 <div class="left">
                   <picture class="img-wrapper blur-load">
-                    <img src="img/img29-min.webp" alt="#" />
+                    <img loading="lazy" src="img/img29-min.webp" alt="#" />
                   </picture>
                   <span class="size size-1">
                     <span class="txt">Спальня</span>
@@ -1704,7 +1830,7 @@
                 </div>
                 <div class="right">
                   <picture class="img-wrapper blur-load">
-                    <img src="img/img32-min.webp" alt="#" />
+                    <img loading="lazy" src="img/img32-min.webp" alt="#" />
                   </picture>
                   <span class="size-box size-box-1">
                     <span class="txt">Спальня</span>
@@ -1746,7 +1872,7 @@
               <div class="swiper-slide swiper-slide--3 to-left">
                 <div class="left">
                   <picture class="img-wrapper blur-load">
-                    <img src="img/img30-min.webp" alt="#" />
+                    <img loading="lazy" src="img/img30-min.webp" alt="#" />
                   </picture>
                   <span class="size size-1">
                     <span class="txt">Терраса</span>
@@ -1765,7 +1891,7 @@
                 </div>
                 <div class="right">
                   <picture class="img-wrapper blur-load">
-                    <img src="img/img33-min.webp" alt="#" />
+                    <img loading="lazy" src="img/img33-min.webp" alt="#" />
                   </picture>
                   <span class="size-box size-box-1">
                     <span class="txt">Терраса</span>
@@ -2068,15 +2194,15 @@
         <div class="villas-map">
           <picture class="placemark-pic active" id="villa1-map blur-load">
             <source srcset="img/111a-mob-min.webp" media="(max-width: 600px)" />
-            <img src="img/111a-min.webp" alt="#" />
+            <img loading="lazy" src="img/111a-min.webp" alt="#" />
           </picture>
           <picture class="placemark-pic hidden" id="villa2-map blur-load">
             <source srcset="img/111b-mob-min.webp" media="(max-width: 600px)" />
-            <img src="img/111b-min.webp" alt="#" />
+            <img loading="lazy" src="img/111b-min.webp" alt="#" />
           </picture>
           <picture class="placemark-pic hidden" id="villa3-map blur-load">
             <source srcset="img/111c-mob-min.webp" media="(max-width: 600px)" />
-            <img src="img/111c-min.webp" alt="#" />
+            <img loading="lazy" src="img/111c-min.webp" alt="#" />
           </picture>
           <div class="map-btns">
             <a href="https://yandex.ru/maps/-/CHH6jEiv">
@@ -3318,7 +3444,7 @@
     </div>
     <div class="modal-overlay"></div>
     <button type="button" class="to-top-button hide">
-      <img loading="lazy" src="img/to-top.svg" alt="↑" width="24" height="24" />
+      <img src="img/to-top.svg" alt="↑" width="24" height="24" />
       <span>Наверх</span>
     </button>
 
