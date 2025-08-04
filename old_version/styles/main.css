@@ -1014,7 +1014,8 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .about {
-  height: 100dvh;
+  height: fit-content;
+  min-height: 100dvh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 735px;
@@ -1079,6 +1080,7 @@ input[type='number']::-webkit-outer-spin-button {
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   overflow: hidden;
+  height: fit-content;
 }
 
 .about .slider-wrapper .slider-title {

@@ -615,14 +615,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 .btn.btn--brown {
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), var(--color);
-  background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      from(rgba(0, 0, 0, 0)),
-      to(rgba(0, 0, 0, 0))
-    ),
-    var(--color);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), var(--color);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), var(--color);
 }
 
@@ -637,13 +630,7 @@ input[type='number']::-webkit-outer-spin-button {
 .btn:hover.btn--white2 {
   background: -o-linear-gradient(bottom, rgba(1, 113, 150, 0) 0%, rgba(1, 113, 150, 0) 100%),
     rgba(255, 255, 255, 0.8);
-  background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      from(rgba(1, 113, 150, 0)),
-      to(rgba(1, 113, 150, 0))
-    ),
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(1, 113, 150, 0)), to(rgba(1, 113, 150, 0))),
     rgba(255, 255, 255, 0.8);
   background: linear-gradient(0deg, rgba(1, 113, 150, 0) 0%, rgba(1, 113, 150, 0) 100%),
     rgba(255, 255, 255, 0.8);
@@ -652,16 +639,8 @@ input[type='number']::-webkit-outer-spin-button {
 .btn:hover.btn--brown {
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
     var(--color);
-  background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      from(rgba(0, 0, 0, 0.5)),
-      to(rgba(0, 0, 0, 0.5))
-    ),
-    var(--color);
-  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%),
-    var(--color);
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), var(--color);
+  background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), var(--color);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.5) 100%), var(--color);
 }
 
@@ -692,13 +671,7 @@ input[type='number']::-webkit-outer-spin-button {
 .btn:active.btn--transparent {
   background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%),
     rgba(255, 255, 255, 0.15);
-  background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      from(rgba(0, 0, 0, 0.1)),
-      to(rgba(0, 0, 0, 0.1))
-    ),
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.1))),
     rgba(255, 255, 255, 0.15);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%),
     rgba(255, 255, 255, 0.15);
@@ -1023,7 +996,10 @@ input[type='number']::-webkit-outer-spin-button {
 }
 
 .about {
-  height: 100dvh;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100dvh;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr 735px;
@@ -1088,6 +1064,9 @@ input[type='number']::-webkit-outer-spin-button {
   -ms-grid-row-span: 1;
   grid-row: 2/3;
   overflow: hidden;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .about .slider-wrapper .slider-title {
@@ -1165,14 +1144,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 .about .slider-wrapper .slider-title .btns-wrapper button:active {
   background: -o-linear-gradient(bottom, var(--color-4) 0%, var(--color-4) 100%), var(--color-2);
-  background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      from(var(--color-4)),
-      to(var(--color-4))
-    ),
-    var(--color-2);
+  background: -webkit-gradient(linear, left bottom, left top, from(var(--color-4)), to(var(--color-4))), var(--color-2);
   background: linear-gradient(0deg, var(--color-4) 0%, var(--color-4) 100%), var(--color-2);
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -1548,16 +1520,8 @@ input[type='number']::-webkit-outer-spin-button {
 .about .map-wrapper .map-btns a:active {
   background: -o-linear-gradient(bottom, rgba(42, 87, 160, 0.15) 0%, rgba(42, 87, 160, 0.15) 100%),
     #fff;
-  background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      from(rgba(42, 87, 160, 0.15)),
-      to(rgba(42, 87, 160, 0.15))
-    ),
-    #fff;
-  background: -o-linear-gradient(bottom, rgba(42, 87, 160, 0.15) 0%, rgba(42, 87, 160, 0.15) 100%),
-    #fff;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(42, 87, 160, 0.15)), to(rgba(42, 87, 160, 0.15))), #fff;
+  background: -o-linear-gradient(bottom, rgba(42, 87, 160, 0.15) 0%, rgba(42, 87, 160, 0.15) 100%), #fff;
   background: linear-gradient(0deg, rgba(42, 87, 160, 0.15) 0%, rgba(42, 87, 160, 0.15) 100%), #fff;
 }
 
@@ -1927,7 +1891,7 @@ input[type='number']::-webkit-outer-spin-button {
   -o-transition: 0.3s;
   transition: 0.3s;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
 }
 
 .layouts .content-banner .content-slider.to-left .swiper-slide {
@@ -3127,16 +3091,8 @@ input[type='number']::-webkit-outer-spin-button {
 .villas .villas-map .map-btns a:active {
   background: -o-linear-gradient(bottom, rgba(42, 87, 160, 0.15) 0%, rgba(42, 87, 160, 0.15) 100%),
     #fff;
-  background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      from(rgba(42, 87, 160, 0.15)),
-      to(rgba(42, 87, 160, 0.15))
-    ),
-    #fff;
-  background: -o-linear-gradient(bottom, rgba(42, 87, 160, 0.15) 0%, rgba(42, 87, 160, 0.15) 100%),
-    #fff;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(42, 87, 160, 0.15)), to(rgba(42, 87, 160, 0.15))), #fff;
+  background: -o-linear-gradient(bottom, rgba(42, 87, 160, 0.15) 0%, rgba(42, 87, 160, 0.15) 100%), #fff;
   background: linear-gradient(0deg, rgba(42, 87, 160, 0.15) 0%, rgba(42, 87, 160, 0.15) 100%), #fff;
 }
 
@@ -4127,14 +4083,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 .request-wrapper .left-wrapper .top-wrapper form input:hover {
   background: -o-linear-gradient(bottom, var(--color-4) 0%, var(--color-4) 100%), var(--color-2);
-  background: -webkit-gradient(
-      linear,
-      left bottom,
-      left top,
-      from(var(--color-4)),
-      to(var(--color-4))
-    ),
-    var(--color-2);
+  background: -webkit-gradient(linear, left bottom, left top, from(var(--color-4)), to(var(--color-4))), var(--color-2);
   background: linear-gradient(0deg, var(--color-4) 0%, var(--color-4) 100%), var(--color-2);
 }
 
@@ -4416,10 +4365,10 @@ input[type='number']::-webkit-outer-spin-button {
     -webkit-transform 0.5s ease-in-out;
   -o-transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out,
     background-color 0.3s ease-in-out;
-  -webkit-transition: opacity 0.5s ease-in-out, background-color 0.3s ease-in-out,
-    -webkit-transform 0.5s ease-in-out;
-  transition: opacity 0.5s ease-in-out, background-color 0.3s ease-in-out,
-    -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: opacity 0.5s ease-in-out,
+    background-color 0.3s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out,
+    background-color 0.3s ease-in-out, -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out,
     background-color 0.3s ease-in-out;
   transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out,
@@ -5101,13 +5050,7 @@ button.to-top-button span {
     width: 100%;
     height: 111px;
     background: -o-linear-gradient(top, #ece6e2 0%, rgba(236, 230, 226, 0) 100%);
-    background: -webkit-gradient(
-      linear,
-      left top,
-      left bottom,
-      from(#ece6e2),
-      to(rgba(236, 230, 226, 0))
-    );
+    background: -webkit-gradient(linear, left top, left bottom, from(#ece6e2), to(rgba(236, 230, 226, 0)));
     background: linear-gradient(180deg, #ece6e2 0%, rgba(236, 230, 226, 0) 100%);
   }
 
@@ -5411,8 +5354,7 @@ button.to-top-button span {
     );
     background: -webkit-gradient(
       linear,
-      left top,
-      left bottom,
+      left top, left bottom,
       from(rgba(56, 41, 30, 0.93)),
       color-stop(15.48%, rgba(56, 41, 30, 0.86)),
       color-stop(32.43%, rgba(56, 41, 30, 0.74)),
@@ -5474,16 +5416,8 @@ button.to-top-button span {
     border-radius: 900px;
     background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
       var(--color-3);
-    background: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0))
-      ),
-      var(--color-3);
-    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%),
-      var(--color-3);
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), var(--color-3);
+    background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), var(--color-3);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), var(--color-3);
   }
 
@@ -6388,14 +6322,7 @@ button.to-top-button span {
     border-radius: 0;
     border-top: 1px solid var(--Color-4, rgba(56, 41, 30, 0.12));
     background: -o-linear-gradient(bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), #fff;
-    background: -webkit-gradient(
-        linear,
-        left bottom,
-        left top,
-        from(rgba(0, 0, 0, 0)),
-        to(rgba(0, 0, 0, 0))
-      ),
-      #fff;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0))), #fff;
     background: linear-gradient(0deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%), #fff;
   }
 
