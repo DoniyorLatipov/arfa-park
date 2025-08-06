@@ -62,6 +62,10 @@
         backdrop-filter: blur(5px);
       }
 
+      .blur-load.loaded {
+        background-image: none !important;
+      }
+
       .blur-load.loaded > img {
         opacity: 1;
       }
@@ -209,7 +213,7 @@
       }
 
       .top .h1 {
-        max-width: 810px;
+        max-width: 850px;
         margin-top: auto;
         color: #ffffff;
       }
@@ -509,15 +513,6 @@
     <noscript>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     </noscript>
-
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script defer src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/inputmask.min.js"></script>
-    <script defer src="https://unpkg.com/@studio-freight/lenis@1.0.40/dist/lenis.umd.js"></script>
-    <!-- <script
-      src="https://api-maps.yandex.ru/2.0/?load=package.standard&amp;lang=ru-RU&amp;apikey=<ваш API-ключ>"
-      type="text/javascript"
-    ></script> -->
-    <script defer src="js/main.min.js"></script>
   </head>
   <body>
     <header class="header">
@@ -774,9 +769,8 @@
           <img src="img/img5-min.webp" fetchpriority="high" alt="#" />
         </picture>
         <h1 class="h1">
-          Готовые виллы премиум класса в&nbsp;
-          <span class="no-wrap">закрытом коттеджном</span>
-          посёлке
+          Готовые виллы премиум класса в закрытом
+          <span class="no-wrap">коттеджном посёлке</span>
         </h1>
         <h6 class=" ">
           Располагаются на&nbsp;берегу Чёрного моря в&nbsp;Сириус-Сочи. Виллы с&nbsp;отделкой
@@ -1595,7 +1589,7 @@
             </a>
           </div>
           <div class="map" id="about-map">
-            <div class="blur-load">
+            <picture class="blur-load map-img-conteiner">
               <img
                 loading="lazy"
                 class="map__imge"
@@ -1603,10 +1597,10 @@
                 src="img/map-desktop-min.webp"
                 alt="map"
               />
-            </div>
+            </picture>
           </div>
           <div class="map-ipad" id="about-map-ipad">
-            <div class="blur-load">
+            <picture class="blur-load map-img-conteiner">
               <img
                 loading="lazy"
                 class="map__imge"
@@ -1614,11 +1608,11 @@
                 src="img/map-tablet-min.webp"
                 alt="map"
               />
-            </div>
+            </picture>
           </div>
 
           <div class="map-mobile" id="about-map-mobile">
-            <div class="blur-load">
+            <picture class="blur-load map-img-conteiner">
               <img
                 loading="lazy"
                 class="map__imge"
@@ -1626,7 +1620,7 @@
                 src="img/map-mobile-min.webp"
                 alt="map"
               />
-            </div>
+            </picture>
           </div>
         </div>
       </section>
@@ -2192,15 +2186,15 @@
           </div>
         </div>
         <div class="villas-map">
-          <picture class="placemark-pic active" id="villa1-map blur-load">
+          <picture class="placemark-pic active blur-load" id="villa1-map">
             <source srcset="img/111a-mob-min.webp" media="(max-width: 600px)" />
             <img loading="lazy" src="img/111a-min.webp" alt="#" />
           </picture>
-          <picture class="placemark-pic hidden" id="villa2-map blur-load">
+          <picture class="placemark-pic blur-load" id="villa2-map">
             <source srcset="img/111b-mob-min.webp" media="(max-width: 600px)" />
             <img loading="lazy" src="img/111b-min.webp" alt="#" />
           </picture>
-          <picture class="placemark-pic hidden" id="villa3-map blur-load">
+          <picture class="placemark-pic blur-load" id="villa3-map">
             <source srcset="img/111c-mob-min.webp" media="(max-width: 600px)" />
             <img loading="lazy" src="img/111c-min.webp" alt="#" />
           </picture>
@@ -3250,8 +3244,8 @@
         </div>
       </div>
     </div>
-    <div class="modal modal--request" data-lenis-prevent>
-      <div class="request-wrapper">
+    <div class="modal modal--request">
+      <div class="request-wrapper" data-lenis-prevent>
         <div class="left-wrapper">
           <button class="close-btn">
             <svg
@@ -3480,5 +3474,14 @@
         img.addEventListener('load', () => loadeImg(div));
       });
     </script>
+
+    <script defer src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/inputmask@5.0.8/dist/inputmask.min.js"></script>
+    <script defer src="https://unpkg.com/@studio-freight/lenis@1.0.40/dist/lenis.umd.js"></script>
+    <!-- <script
+      src="https://api-maps.yandex.ru/2.0/?load=package.standard&amp;lang=ru-RU&amp;apikey=<ваш API-ключ>"
+      type="text/javascript"
+    ></script> -->
+    <script defer src="js/main.min.js"></script>
   </body>
 </html>
