@@ -3078,6 +3078,10 @@ input[type='number']::-webkit-outer-spin-button {
   object-fit: cover;
 }
 
+.villas .villas-map picture#villa3-map img {
+  object-position: right center;
+}
+
 .villas .villas-map .map-btns {
   position: absolute;
   bottom: 28px;
