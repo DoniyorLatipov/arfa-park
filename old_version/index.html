@@ -46,13 +46,11 @@
         let neededSrc;
         const hour = new Date().getHours();
 
-        if (isEven) {
-          if (hour >= 18 || hour < 6) {
-            neededSrc = 'img/img-bg-mob-dark-min.webp';
-            top.classList.add('dark');
-          } else {
-            neededSrc = 'img/img-bg-mob-day-min.webp';
-          }
+        if (hour >= 18 || hour < 6) {
+          neededSrc = 'img/img-bg-mob-dark-min.webp';
+          top.classList.add('dark');
+        } else if (isEven) {
+          neededSrc = 'img/img-bg-mob-day-min.webp';
         } else {
           neededSrc = 'img/img38-min.webp';
         }
@@ -356,8 +354,8 @@
         }
 
         .top.dark {
-          background-color: #02174A;
-        } 
+          background-color: #02174a;
+        }
 
         .btn.btn--white2 {
           border-radius: 900px;
@@ -408,8 +406,8 @@
         }
 
         .top.dark .section-img::before {
-                    background: -o-linear-gradient(top, #02174A 0%, rgba(42, 134, 207, 0) 32.52%);
-          background: linear-gradient(180deg, #02174A 0%, rgba(42, 134, 207, 0) 32.52%);
+          background: -o-linear-gradient(top, #02174a 0%, rgba(42, 134, 207, 0) 32.52%);
+          background: linear-gradient(180deg, #02174a 0%, rgba(42, 134, 207, 0) 32.52%);
         }
 
         .top .h1 {
@@ -425,7 +423,7 @@
         }
 
         .top.dark h6 {
-          color: #A3B9EB;
+          color: #a3b9eb;
         }
 
         .top .btns-wrapper {
@@ -434,13 +432,13 @@
         }
 
         .top.dark .btn.btn--white2 {
-          background: #A3B9EB;
-          color: #02184A;
+          background: #a3b9eb;
+          color: #02184a;
         }
 
         .top.dark .btn.btn--transparent {
-          border-color: #A3B9EC;
-          color: #A3B9EC;
+          border-color: #a3b9ec;
+          color: #a3b9ec;
         }
 
         .cookie-container {
@@ -537,11 +535,11 @@
     </noscript>
     <link
       rel="preload"
-      href="styles/main-autoprefix.min.css?v=2"
+      href="styles/main-autoprefix.min.css?v=3"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript><link rel="stylesheet" href="styles/main-autoprefix.min.css?v=1" /></noscript>
+    <noscript><link rel="stylesheet" href="styles/main-autoprefix.min.css?v=3" /></noscript>
     <link
       rel="preload"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
@@ -2224,17 +2222,17 @@
           </div>
         </div>
         <div class="villas-map">
-          <picture class="placemark-pic active blur-load" id="villa1-map">
+          <picture class="placemark-pic active" id="villa1-map">
             <source srcset="img/111a-mob-min.webp" media="(max-width: 600px)" />
-            <img loading="lazy" src="img/111a-min.webp" alt="#" />
+            <img src="img/111a-min.webp" alt="#" />
           </picture>
-          <picture class="placemark-pic blur-load" id="villa2-map">
+          <picture class="placemark-pic" id="villa2-map">
             <source srcset="img/111b-mob-min.webp" media="(max-width: 600px)" />
-            <img loading="lazy" src="img/111b-min.webp" alt="#" />
+            <img src="img/111b-min.webp" alt="#" />
           </picture>
-          <picture class="placemark-pic blur-load" id="villa3-map">
+          <picture class="placemark-pic" id="villa3-map">
             <source srcset="img/111c-mob-min.webp" media="(max-width: 600px)" />
-            <img loading="lazy" src="img/111c-min.webp" alt="#" />
+            <img src="img/111c-min.webp" alt="#" />
           </picture>
           <div class="map-btns">
             <a href="https://yandex.ru/maps/-/CHH6jEiv">
