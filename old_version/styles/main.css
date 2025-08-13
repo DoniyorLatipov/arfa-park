@@ -2749,9 +2749,11 @@ input[type='number']::-webkit-outer-spin-button {
   grid-column: 1/2;
   -ms-grid-column-align: end;
   justify-self: end;
-  width: 865px;
-  height: 865px;
+  max-width: 865px;
+  max-height: 865px;
   aspect-ratio: 1/1;
+  width: 100%;
+  height: 100%;
 }
 
 .flow3 .picture--hide.img3 {
