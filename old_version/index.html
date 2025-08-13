@@ -30,26 +30,35 @@
       href="img/favicons/apple-touch-icon-1024x1024.png"
     />
     <script>
-      // let visits = parseInt(localStorage.getItem('site_visits') || '0', 10);
-      // visits += 1;
-      // localStorage.setItem('site_visits', visits);
+      let visits = parseInt(localStorage.getItem('site_visits') || '0', 10);
+      visits += 1;
+      localStorage.setItem('site_visits', visits);
 
-      // const isEven = visits % 2 === 0;
-      // localStorage.setItem('isEvenVisit', isEven.toString());
+      const isEven = visits % 2 === 0;
+      localStorage.setItem('isEvenVisit', isEven.toString());
     </script>
     <script>
-      // document.addEventListener('DOMContentLoaded', () => {
-      //   const isEven = localStorage.getItem('isEvenVisit') === 'true';
-      //   const img = document.getElementById('intro-image');
-      //   const top = document.querySelector('.top');
+      document.addEventListener('DOMContentLoaded', () => {
+        const isEven = localStorage.getItem('isEvenVisit') === 'true';
+        const img = document.getElementById('intro-image');
+        const top = document.querySelector('.top');
 
-      //   if (img) {
-      //     img.srcset = isEven ? 'img/img5.jpg' : 'img/img38.jpg';
-      //     top.style.background = isEven
-      //       ? 'linear-gradient(90deg, #0089D1, #008CD5 10%, #007FCE 40%)'
-      //       : '#2a86cf';
-      //   }
-      // });
+        let neededSrc;
+        const hour = new Date().getHours();
+
+        if (isEven) {
+          if (hour >= 18 || hour < 6) {
+            neededSrc = 'img/img-bg-mob-dark-min.webp';
+            top.classList.add('dark');
+          } else {
+            neededSrc = 'img/img-bg-mob-day-min.webp';
+          }
+        } else {
+          neededSrc = 'img/img38-min.webp';
+        }
+
+        img.srcset = neededSrc;
+      });
     </script>
     <style>
       body {
@@ -346,6 +355,10 @@
           background-color: #2a86cf;
         }
 
+        .top.dark {
+          background-color: #02174A;
+        } 
+
         .btn.btn--white2 {
           border-radius: 900px;
           background: #62baffa3;
@@ -394,6 +407,11 @@
           background: linear-gradient(180deg, #2a86cf 0%, rgba(42, 134, 207, 0) 32.52%);
         }
 
+        .top.dark .section-img::before {
+                    background: -o-linear-gradient(top, #02174A 0%, rgba(42, 134, 207, 0) 32.52%);
+          background: linear-gradient(180deg, #02174A 0%, rgba(42, 134, 207, 0) 32.52%);
+        }
+
         .top .h1 {
           margin-top: 0;
         }
@@ -406,9 +424,23 @@
           letter-spacing: -0.8px;
         }
 
+        .top.dark h6 {
+          color: #A3B9EB;
+        }
+
         .top .btns-wrapper {
           margin-top: 32px;
           gap: 12px;
+        }
+
+        .top.dark .btn.btn--white2 {
+          background: #A3B9EB;
+          color: #02184A;
+        }
+
+        .top.dark .btn.btn--transparent {
+          border-color: #A3B9EC;
+          color: #A3B9EC;
         }
 
         .cookie-container {
@@ -3115,7 +3147,9 @@
         <p>© 2025 «Арфа» Парк</p>
         <ul>
           <li>
-            <a href="personal-data-policy.html" target="_blank">Политика обработки персональных данных</a>
+            <a href="personal-data-policy.html" target="_blank">
+              Политика обработки персональных данных
+            </a>
           </li>
           <li>
             <a href="company-details.html" target="_blank">Реквизиты</a>
