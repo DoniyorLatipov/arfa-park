@@ -428,12 +428,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const formData = new FormData(clientForm);
     const data = Object.fromEntries(formData.entries());
+    const json = JSON.stringify(data);
 
-    openSuccessModal(data);
-
-    setTimeout(() => {
-      clientForm.reset();
-    }, 500);
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: json,
+    })
+      .then(() => openSuccessModal(data))
+      .then(() =>
+        setTimeout(() => {
+          clientForm.reset();
+        }, 500),
+      );
   });
 
   const toTopBtn = document.querySelector('.to-top-button');

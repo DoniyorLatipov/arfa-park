@@ -505,7 +505,7 @@
     </noscript>
     <link
       rel="preload"
-      href="styles/main-autoprefix.min.css?v=1"
+      href="styles/main-autoprefix.min.css?v=2"
       as="style"
       onload="this.onload=null;this.rel='stylesheet'"
     />
@@ -3284,7 +3284,8 @@
           <div class="top-wrapper">
             <h3 class="h3">Оставить заявку</h3>
             <p>Оставьте заявку и&nbsp;мы свяжемся с&nbsp;вами для уточнения деталей.</p>
-            <form id="clientForm">
+            <form id="clientForm" action="https://api.web3forms.com/submit" method="POST">
+              <input type="hidden" name="access_key" value="3cb5f7d7-977a-48ef-b6cf-09f3a7e22acb" />
               <div class="input-wrapper">
                 <input type="text" placeholder="Как к вам обращаться" name="name" required />
                 <span class="line"></span>
@@ -3488,6 +3489,6 @@
       src="https://api-maps.yandex.ru/2.0/?load=package.standard&amp;lang=ru-RU&amp;apikey=<ваш API-ключ>"
       type="text/javascript"
     ></script> -->
-    <script defer src="js/main.min.js?v=1"></script>
+    <script defer src="js/main.min.js?v=2"></script>
   </body>
 </html>
